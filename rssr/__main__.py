@@ -2,7 +2,7 @@ import daemon
 import sched
 import argparse
 import time
-import rssr.rss
+import rssr.crawler
 import datetime
 import logging
 
@@ -22,8 +22,8 @@ def task(urls):
     for url in urls:
         logger.info("Start parsing {}".format(url))
 
-        fetched = rssr.rss.fetch(url)
-        print(rssr.rss.format(fetched.text))
+        fetched = rssr.crawler.fetch(url)
+        print(rssr.crawler.format(fetched.text))
 
         logger.info("ok.")
 
