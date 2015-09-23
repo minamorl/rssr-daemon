@@ -16,7 +16,10 @@ def fetch(url, max_retry=3, sleep=10):
 
 
 def format(text):
-    return feedparser.parse(text)
+    d = feedparser.parse(text)
+    feed_detail = (d.feed.title, d.feed.link)
+    return (feed_detail, d.entries)
+
 
 
 class CrawlException(Exception):
