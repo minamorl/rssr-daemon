@@ -10,7 +10,6 @@ def fetch(url, max_retry=3, sleep=10):
         response = requests.get(url)
 
         if response.status_code == requests.codes.ok:
-            print(response.text)
             return response
         if i < max_retry:
             time.sleep(sleep)
@@ -18,7 +17,7 @@ def fetch(url, max_retry=3, sleep=10):
     raise CrawlException()
 
 
-def format(self, text):
+def format(text):
     return feedparser.parse(text)
 
 
