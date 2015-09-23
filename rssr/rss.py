@@ -3,7 +3,7 @@ import feedparser
 import requests
 
 
-def fetch(self, url, max_retry=0, sleep=1000):
+def fetch(self, url, max_retry=3, sleep=10):
     for i in range(0, max_retry):
         response = requests.get(url)
 
