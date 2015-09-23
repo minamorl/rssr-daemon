@@ -1,13 +1,16 @@
 import time
 import feedparser
 import requests
+import logging
 
+logger = logging.getLogger("rssr_daemon")
 
-def fetch(self, url, max_retry=3, sleep=10):
+def fetch(url, max_retry=3, sleep=10):
     for i in range(0, max_retry):
         response = requests.get(url)
 
-        if response.status_code == requests.codes.ok
+        if response.status_code == requests.codes.ok:
+            print(response.text)
             return response
         if i < max_retry:
             time.sleep(sleep)
