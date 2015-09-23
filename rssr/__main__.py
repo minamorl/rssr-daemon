@@ -16,7 +16,8 @@ def _argparse():
 
 def task(urls):
     for url in urls:
-        rssr.rss.fetch(url)
+        fetched = rssr.rss.fetch(url)
+        print(rssr.rss.format(fetched.text))
 
 
 def _main(args):
