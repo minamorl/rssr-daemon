@@ -1,6 +1,6 @@
 # rssr-daemon
 
-[wip] A schedule based crawler daemon for RSS feader.
+[wip] A schedule based crawler daemon for rss/atom reader.
 
 For contributors:
 ```sh
