@@ -15,3 +15,10 @@ pip install -rrequirements.txt
 python -m rssr http://simeonfranklin.com/feeds/blog/ \
 https://github.com/fredrikstolpe/RenoiseGuru/commits/master.atom
 ```
+
+## Test
+
+```sh
+cd rssr
+tox
+```
