@@ -3,7 +3,6 @@ import feedparser
 import requests
 import logging
 
-logger = logging.getLogger("rssr_daemon")
 
 def fetch(url, max_retry=3, sleep=10):
     for i in range(0, max_retry):
