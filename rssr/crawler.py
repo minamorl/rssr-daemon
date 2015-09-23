@@ -1,7 +1,6 @@
 import time
 import feedparser
 import requests
-import logging
 
 
 def fetch(url, max_retry=3, sleep=10):

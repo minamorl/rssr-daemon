@@ -1,21 +1,13 @@
 import daemon
 import sched
-import argparse
 import time
-import rssr.crawler
 import datetime
-import logging
+
+import rssr.crawler
+from rssr.utils import _argparse, exec_time, _logger
 
 
-logging.basicConfig(level=logging.INFO, filename='rssr-daemon.log', filemode='w')
-logger = logging.getLogger(__name__)
-
-def _argparse():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--daemonize', action='store_true')
-    parser.add_argument('url', nargs='+')
-    parser.add_argument('--delta', default=5)
-    return parser
+logger = _logger(__name__)
 
 
 def task(urls):
@@ -27,8 +19,8 @@ def task(urls):
 
         logger.info("ok.")
 
-def _main(args):
 
+def _main(args):
     logger.info("Start processing..")
     s = sched.scheduler(time.time, time.sleep)
     for t in exec_time(datetime.timedelta(minutes=int(args.delta))):
@@ -36,22 +28,15 @@ def _main(args):
         s.run()
 
 
-def exec_time(delta):
-    while True:
-        base_time = datetime.datetime.now()
-        dt = base_time + delta
-        logger.info("Next scheduled time: {}".format(dt))
-        yield time.mktime(dt.timetuple())
-
-
 def main():
     args = _argparse().parse_args()
 
     if args.daemonize:
-        with daemon.DaemonContext():
+        with daemon.DaemonContext(pidfile=args.pidfile):
             _main(args)
-    else:
-        _main(args)
+
+    _main(args)
+
 
 if __name__ == '__main__':
     main()
