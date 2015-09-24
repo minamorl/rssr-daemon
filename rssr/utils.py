@@ -2,6 +2,7 @@ import argparse
 import time
 import datetime
 import logging
+import string
 
 
 def _logger(name):

@@ -4,7 +4,6 @@ import time
 import datetime
 import os
 import rssr.crawler
-import string
 from rssr.utils import _argparse, exec_time, _logger, validate_filename
 
 
