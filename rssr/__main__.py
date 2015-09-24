@@ -2,29 +2,38 @@ import daemon
 import sched
 import time
 import datetime
-
+import os
 import rssr.crawler
-from rssr.utils import _argparse, exec_time, _logger
+import string
+from rssr.utils import _argparse, exec_time, _logger, validate_filename
 
 
 logger = _logger(__name__)
 
 
-def task(urls):
-    for url in urls:
+def task(args):
+    for url in args.url:
         logger.info("Start parsing {}".format(url))
-
         fetched = rssr.crawler.fetch(url)
+
+        filename = validate_filename(url)
+        filepath = os.path.join(args.dest, filename)
+
+        logger.info("file {} was generated.".format(filepath))
+
+        with open(filepath, 'w') as f:
+            f.write(fetched.text)
+
         print(rssr.crawler.format(fetched.text))
 
-        logger.info("ok.")
+        logger.info("task end.")
 
 
 def _main(args):
     logger.info("Start processing..")
     s = sched.scheduler(time.time, time.sleep)
     for t in exec_time(datetime.timedelta(minutes=int(args.delta))):
-        s.enterabs(t, 1, task, argument=(args.url, ))
+        s.enterabs(t, 1, task, argument=(args, ))
         s.run()
 
 

@@ -11,6 +11,11 @@ def _logger(name):
 logger = _logger(__name__)
 
 
+def validate_filename(url):
+    valid_chars = "-_.() %s%s" % (string.ascii_letters, string.digits)
+    filename = ''.join(c for c in url if c in valid_chars)
+    return filename
+
 
 def _argparse():
     parser = argparse.ArgumentParser()
@@ -18,6 +23,7 @@ def _argparse():
     parser.add_argument('url', nargs='+')
     parser.add_argument('--delta', default=5)
     parser.add_argument('--pidfile', default=None)
+    parser.add_argument('--dest', default="./misc/")
     return parser
 
 
@@ -28,6 +34,7 @@ def exec_time(delta):
         dt = base_time + delta
         logger.info("Next scheduled time: {}".format(dt))
         yield datetime_to_time(dt)
+
 
 def datetime_to_time(dt):
     return time.mktime(dt.timetuple())
