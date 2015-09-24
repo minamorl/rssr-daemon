@@ -2,7 +2,7 @@ import argparse
 import time
 import datetime
 import logging
-import string
+import base64
 
 
 def _logger(name):
@@ -12,10 +12,8 @@ def _logger(name):
 logger = _logger(__name__)
 
 
-def validate_filename(url):
-    valid_chars = "-_.() %s%s" % (string.ascii_letters, string.digits)
-    filename = ''.join(c for c in url if c in valid_chars)
-    return filename
+def validate_filename(filename):
+    return base64.b64encode(filename.encode('utf-8')).decode('utf-8')
 
 
 def _argparse():
