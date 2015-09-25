@@ -21,6 +21,5 @@ def format(text):
     return (feed_detail, d.entries)
 
 
-
 class CrawlException(Exception):
     pass

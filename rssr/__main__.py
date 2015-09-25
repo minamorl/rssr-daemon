@@ -4,7 +4,8 @@ import time
 import datetime
 import os
 import rssr.crawler
-from rssr.utils import _argparse, exec_time, _logger, validate_filename, save_parsed_value, save_raw_feed
+from rssr.utils import _argparse, exec_time, _logger, validate_filename
+from rssr.persistent import save_parsed_value, save_raw_feed
 
 
 logger = _logger(__name__)
