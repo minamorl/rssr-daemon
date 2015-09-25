@@ -1,12 +1,10 @@
 import daemon
-import redis
 import sched
 import time
 import datetime
 import os
 import rssr.crawler
-from rssr.utils import _argparse, exec_time, _logger, validate_filename
-import pickle
+from rssr.utils import _argparse, exec_time, _logger, validate_filename, save_parsed_value, save_raw_feed
 
 
 logger = _logger(__name__)
@@ -19,23 +17,13 @@ def task(args):
 
         filename = validate_filename(url)
         filepath = os.path.join(args.dest, filename)
-
-        with open(filepath, 'w') as f:
-            f.write(fetched.text)
-
-        logger.info("file {} was generated.".format(filepath))
+        save_raw_feed(fetched.text, open(filepath, 'w'))
 
         data = rssr.crawler.format(fetched.text)
-        save_redis(url, data)
+        save_parsed_value(url, data)
 
         logger.info("task end.")
 
-
-def save_redis(url, data):
-    r = redis.StrictRedis()
-    redis_key = "rssr:feed:{title}@{date}".format(title=url, date=datetime.datetime.now().strftime('%Y%m%d%H%M%S'))
-    savable = pickle.dumps(data)
-    r.append(redis_key, savable)
 
 def _main(args):
     logger.info("Start processing..")
