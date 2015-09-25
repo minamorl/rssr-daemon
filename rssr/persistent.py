@@ -17,3 +17,11 @@ def save_raw_feed(data, fp):
     with fp:
         fp.write(data)
     logger.info("file {} was generated.".format(fp.name))
+
+
+def get_url_lists(redis_key=None):
+    r = redis.StrictRedis(decode_responses=True)
+    redis_key = redis_key or "rssr:url:*"
+    for key in r.keys(redis_key):
+        url = r.get(key)
+        yield url

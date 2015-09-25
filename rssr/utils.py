@@ -19,7 +19,6 @@ def validate_filename(filename):
 def _argparse():
     parser = argparse.ArgumentParser()
     parser.add_argument('--daemonize', action='store_true')
-    parser.add_argument('url', nargs='+')
     parser.add_argument('--delta', default=5)
     parser.add_argument('--pidfile', default=None)
     parser.add_argument('--dest', default="./misc/")
