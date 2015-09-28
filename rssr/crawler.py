@@ -15,11 +15,5 @@ def fetch(url, max_retry=3, sleep=10):
     raise CrawlException()
 
 
-def format(text):
-    d = feedparser.parse(text)
-    feed_detail = (d.feed.title, d.feed.link)
-    return (feed_detail, d.entries)
-
-
 class CrawlException(Exception):
     pass

@@ -20,8 +20,7 @@ def task(args):
         filepath = os.path.join(args.dest, filename)
         save_raw_feed(fetched.text, open(filepath, 'w'))
 
-        data = rssr.crawler.format(fetched.text)
-        save_parsed_value(url, data)
+        save_parsed_value(url, fetched.text)
 
         logger.info("task end.")
 
