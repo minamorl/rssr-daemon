@@ -21,7 +21,5 @@ def save_raw_feed(data, fp):
 
 def get_url_lists(redis_key=None):
     r = redis.StrictRedis(decode_responses=True)
-    redis_key = redis_key or "rssr:url:*"
-    for key in r.keys(redis_key):
-        url = r.get(key)
-        yield url
+    redis_key = redis_key or "rssr:urls"
+    return r.lrange(redis_key, 0, -1)
