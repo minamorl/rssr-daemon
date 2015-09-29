@@ -9,12 +9,12 @@ logger = _logger(__name__)
 
 def save_parsed_value(url, data, redis_key=None):
     r = redis.StrictRedis()
-    
+
     d = feedparser.parse(data).entries
     for item in d:
-        redis_key = redis_key or "rssr:feed:{feed_url}:{item}".format(feed_url=url, item=item.link )
+        redis_key = redis_key or "rssr:feed:{feed_url}:{item}".format(feed_url=url, item=item.link)
         print(item)
-        r.hmset(redis_key, item) 
+        r.hmset(redis_key, item)
 
 
 def save_raw_feed(data, fp):
@@ -27,4 +27,3 @@ def get_url_lists(redis_key=None):
     r = redis.StrictRedis(decode_responses=True)
     redis_key = redis_key or "rssr:urls"
     return r.lrange(redis_key, 0, -1)
-
