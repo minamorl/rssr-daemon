@@ -20,10 +20,13 @@ def save_parsed_value(url, data, redis_key=None):
             "id": item.id,
             "link": item.link,
             "published": datetime.datetime.fromtimestamp(mktime(item.published_parsed)).strftime('%Y-%m-%d %H:%M:%S'),
+            "title": item.title,
             "author": item.author,
             "summary": item.summary,
-            "title": item.title,
         }
+
+        if "content" in item:
+            formatted.update({ "content": item.content[0].value })
 
         r.hmset(redis_key, formatted)
 
