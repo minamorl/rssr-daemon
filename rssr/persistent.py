@@ -12,7 +12,7 @@ def save_parsed_value(url, data, redis_key=None):
 
     d = feedparser.parse(data).entries
     for item in d:
-        redis_key = redis_key or "rssr:feed:{feed_url}:{item}".format(feed_url=url, item=item.link)
+        redis_key = "rssr:feed:{feed_url}:{item}".format(feed_url=url, item=item.link)
         print(item)
         r.hmset(redis_key, item)
 
