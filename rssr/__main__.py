@@ -4,6 +4,7 @@ import time
 import datetime
 import os
 import rssr.crawler
+import sys
 from rssr.utils import _argparse, exec_time, _logger, validate_filename
 from rssr.persistent import save_parsed_value, save_raw_feed, get_url_lists
 
@@ -19,8 +20,6 @@ def task(args):
         filename = validate_filename(url)
         filepath = os.path.join(args.dest, filename)
         save_raw_feed(fetched.text, open(filepath, 'w'))
-
-        save_parsed_value(url, fetched.text)
 
         logger.info("task end.")
 
