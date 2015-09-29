@@ -12,8 +12,7 @@ python -m rssr -h
 
 # example
 pip install -rrequirements.txt
-python -m rssr http://simeonfranklin.com/feeds/blog/ \
-https://github.com/fredrikstolpe/RenoiseGuru/commits/master.atom
+python -m rssr 
 ```
 
 ## Test
