@@ -1,0 +1,2509 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule" xmlns:re="http://purl.org/atompub/rank/1.0">
+    <title type="text">Active questions tagged java - Stack Overflow</title>
+    <link rel="self" href="http://stackoverflow.com/feeds/tag/java" type="application/atom+xml" />
+    <link rel="alternate" href="http://stackoverflow.com/questions/tagged/?tagnames=java&amp;sort=active" type="text/html" />
+    <subtitle>most recent 30 from stackoverflow.com</subtitle>
+    <updated>2015-09-30T02:29:22Z</updated>
+    <id>http://stackoverflow.com/feeds/tag/java</id>
+    <creativeCommons:license>http://www.creativecommons.org/licenses/by-sa/3.0/rdf</creativeCommons:license> 
+    <entry>
+        <id>http://stackoverflow.com/q/32856755</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">(Noob) Quick help on output statement</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+        <author>
+            <name>archer</name>
+            <uri>http://stackoverflow.com/users/5034466</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856755/noob-quick-help-on-output-statement" />
+        <published>2015-09-30T02:24:36Z</published>
+        <updated>2015-09-30T02:28:16Z</updated>
+        <summary type="html">
+            
+
+            &lt;pre&gt;&lt;code&gt;    if (gpa &amp;lt; 2.0)
+    System.out.println(&quot;The student &quot;  +first  +last + &quot; is not graduating.&quot;); 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is my output statement. However the result I get is &lt;/p&gt;
+
+&lt;p&gt;The student BobPaul is not graduating. &lt;/p&gt;
+
+&lt;p&gt;How do I add a space between the +first and +last so that way my output statement looks like&lt;/p&gt;
+
+&lt;p&gt;The student Bob Paul is not graduating.&lt;/p&gt;
+
+&lt;p&gt;the correct answer is&lt;/p&gt;
+
+&lt;p&gt;System.out.println(&quot;The student &quot;  +first + &quot; &quot; + last + &quot; is not graduating.&quot;); &lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856710</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Having trouble with writing a .txt flie</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+        <author>
+            <name>JonBon</name>
+            <uri>http://stackoverflow.com/users/5391149</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856710/having-trouble-with-writing-a-txt-flie" />
+        <published>2015-09-30T02:19:22Z</published>
+        <updated>2015-09-30T02:25:30Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;So I am having trouble getting my program to not throw NoSuchElement exceptions at me. When I input the owner info, it throws the exception after the second owner no matter which owner I input:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Jones; 221 Smith St; Arlington; Texas; 76019
+
+Smith; 7345 Lane Rd; Dallas; Texas; 75000
+
+Willis; 596 Dale Lane; Fort Worth; Texas; 76123
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here&#39;s my code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import java.util.Formatter;
+import java.util.Scanner;
+import java.util.NoSuchElementException;
+import java.util.StringTokenizer;
+
+public class WriteFile
+{
+
+public static void main(String[] args)
+{
+
+    Formatter output;
+    try
+    {
+        output = new Formatter(&quot;owners.txt&quot;);
+        System.out.println(&quot;file accessed&quot;);
+
+        System.out.println(&quot;Please enter owner information. Separate     information with semicolons please:&quot;);
+        Scanner input = new Scanner(System.in);
+
+        while(input.hasNext())
+        {
+            try
+            {
+
+                String owner = input.nextLine();
+                String[] tokens = owner.split(&quot;;&quot;);
+
+                output.format(&quot;%s %s %s %s %d%n&quot;,input.next(), input.next(), input.next(), input.next(),input.nextInt());
+            }
+
+            catch(NoSuchElementException ee)
+            {
+                System.out.println(&quot;Error on input. Please try again.&quot;);
+                input.nextLine();
+            }
+        }
+
+        output.close();
+    }
+    catch(Exception e)
+    {
+        System.out.println(&quot;Error working with file&quot;);
+    }
+}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thank you all for your help!&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856756</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Using 2 classes for a Comission Calculator in Java</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="class" />
+        <author>
+            <name>FreakBeast</name>
+            <uri>http://stackoverflow.com/users/5391157</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856756/using-2-classes-for-a-comission-calculator-in-java" />
+        <published>2015-09-30T02:24:44Z</published>
+        <updated>2015-09-30T02:24:44Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;I am doing an assignment for a beginning Java class. We have to write a commission calculator and use two classes in it. I am stuck on how to use variables from one class in a second class. The methods that i have found so far are not working for me. Any advice would be greatly helpful. Below is the code i have so far.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&quot;snippet&quot; data-lang=&quot;js&quot; data-hide=&quot;false&quot;&gt;
+&lt;div class=&quot;snippet-code&quot;&gt;
+&lt;pre class=&quot;snippet-code-js lang-js prettyprint-override&quot;&gt;&lt;code&gt;package calc;
+
+/**
+ *
+ * @author Ethan
+ */
+import java.util.Scanner;
+
+public class Calc {
+
+    public static void main(String[] args) {
+        
+ Scanner calcu = new Scanner(System.in); //Creats the scanner used for Input
+  //Sets all of the variables to be used
+ double sal; //salary
+  double com1; //Comission percentage
+  double com2; // Find the ammount of comisssion from yearly sales
+  double comp; //Yearly Sales
+  double frac; //Decimal Comission form
+  double total; // Total of Compensation of Yearly salary + Comission
+          
+    System.out.println(&quot;Enter the annual Salary here: &quot;);
+    sal = calcu.nextDouble();
+    
+    System.out.println(&quot;Enter the total Sales here: &quot;);
+    comp = calcu.nextDouble();
+    
+   Rate();
+frac = com1/100; //converts the Sales Comission to a decimal
+ com2 = frac * comp; // Find the total Comission based on the 
+  total = sal + com2; //find the total compensation
+  
+  System.out.print(&quot;Your total compensation is &quot; + total);
+    
+    }
+private static void Rate(){
+     // Rate of commission is determined below.
+        if (comp &amp;lt; 10000)
+           com1 = 20;            //20% commission rate
+        else if (comp &amp;lt; 30000)
+           com1 = 22;             // 22% commission rate
+        else if (comp &amp;lt; 50000)
+           com1 = 23;            // 23% commission rate
+        else if (comp &amp;lt; 100000)
+           com1 = 24;            // 24% commission rate
+        else
+           com1 = 25;            // 25% commission rate
+    
+}
+    
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The problem i have is the i can&#39;t pull the rates so they can be used in the calculations.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856752</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">How to remove last 3 characters from a list of String in java</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="string" />
+        <author>
+            <name>Subho</name>
+            <uri>http://stackoverflow.com/users/2412395</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856752/how-to-remove-last-3-characters-from-a-list-of-string-in-java" />
+        <published>2015-09-30T02:24:26Z</published>
+        <updated>2015-09-30T02:24:26Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;I have a list which contains some String in this format  23:45:50 ,12:32:70 etc. I want to cut this last two digits after : ,i am using substring but it is not working properly,i am posting my code &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class SplitString {
+
+public static void main(String[] args) {
+
+    List&amp;lt;String&amp;gt; aList = new ArrayList&amp;lt;String&amp;gt;();
+    aList.add(&quot;4:78:34&quot;);
+    aList.add(&quot;5:8:34&quot;);
+    aList.add(&quot;8:18:90&quot;);
+    aList.add(&quot;2:8:40&quot;);
+
+
+    for(int i=0;i&amp;lt;aList.size();i++){
+
+        String str = aList.get(i).substring(0, aList.get(i).length()-3);
+        aList.add(str);
+
+    }
+    System.out.println(aList);
+}
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But giving the result&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Exception in thread &quot;main&quot; java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+at java.lang.String.substring(Unknown Source)
+at com.test.SplitString.main(SplitString.java:19)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I  want the output as 23:45,12:32&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856634</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Error cant find symbol in the PieChart JavaFX?</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="javafx" />
+            <category scheme="http://stackoverflow.com/tags" term="tableview" />
+            <category scheme="http://stackoverflow.com/tags" term="pie-chart" />
+            <category scheme="http://stackoverflow.com/tags" term="observablelist" />
+        <author>
+            <name>mr chon</name>
+            <uri>http://stackoverflow.com/users/5313699</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856634/error-cant-find-symbol-in-the-piechart-javafx" />
+        <published>2015-09-30T02:08:23Z</published>
+        <updated>2015-09-30T02:22:14Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;why my PieChart is not showing when i select a row in tableview &lt;/p&gt;
+
+&lt;p&gt;I am parsing a text file and then I want to view the values in an organized way ,the parsing works well&lt;/p&gt;
+
+&lt;p&gt;now i want to put the values from to TableView to PieChart when a row is selected .&lt;/p&gt;
+
+&lt;p&gt;i get the error &quot; cant find symbol&quot; in new PieChart.Data(&quot;CBO&quot;, m.getCBO()), &lt;/p&gt;
+
+&lt;p&gt;content of text file&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gr.spinellis.ckjm.ClassVisitor 13 2 0 14 74 34 2 9
+
+gr.spinellis.ckjm.ClassMetricsContainer 3 1 0 3 18 0 2 2
+
+gr.spinellis.ckjm.MetricsFilter 7 1 0 6 30 11 2 5
+
+gr.spinellis.ckjm.PrintPlainResults 2 1 0 2 8 0 1 2
+
+gr.spinellis.ckjm.MethodVisitor 11 2 0 21 40 0 1 8
+
+gr.spinellis.ckjm.CkjmOutputHandler 1 1 0 1 1 0 3 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;this is my code &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;        package javaapplication50;
+        import java.io.BufferedReader;
+        import java.io.IOException;
+        import java.nio.charset.StandardCharsets;
+        import java.nio.file.Files;
+        import java.nio.file.Path;
+        import java.nio.file.Paths;
+        import java.util.ArrayList;
+        import java.util.List;
+        import javafx.application.Application;
+        import javafx.beans.property.SimpleDoubleProperty;
+        import javafx.beans.property.SimpleIntegerProperty;
+        import javafx.beans.property.SimpleStringProperty;
+        import javafx.collections.FXCollections;
+        import javafx.collections.ObservableList;
+        import javafx.event.Event;
+        import javafx.event.EventHandler;
+        import javafx.scene.Group;
+        import javafx.scene.Scene;
+        import javafx.scene.chart.PieChart;
+        import javafx.scene.control.Label;
+        import javafx.scene.control.TableColumn;
+        import javafx.scene.control.TableView;
+        import javafx.scene.control.TableView.TableViewSelectionModel;
+        import javafx.scene.control.cell.PropertyValueFactory;
+        import javafx.scene.layout.VBox;
+        import javafx.stage.Stage;
+
+        public class JavaFX_JavaApplication50_TableView extends Application {
+
+
+
+         public TableView &amp;lt; Metrics &amp;gt; tableView = new TableView&amp;lt;Metrics&amp;gt;();
+        private ObservableList&amp;lt; Metrics &amp;gt; dataList =   FXCollections.observableArrayList(
+
+        // /do something like this  new Metrics(name,WMC,DIT,NOC ,CBO,RFC,LCOM , Ce, NPM),
+        // i want to add Metrics ADDED DYNAMICALLY after file is parsed
+
+        );
+
+
+            ObservableList&amp;lt;PieChart.Data&amp;gt; pieChartData = FXCollections
+                    .observableArrayList(
+                            new PieChart.Data(&quot;CBO&quot;, m.getCBO()),
+                            new PieChart.Data(&quot;Ce&quot;, m.getCe()),
+                            new PieChart.Data(&quot;DIT&quot;, m.getDIT()),
+                            new PieChart.Data(&quot;LCOM&quot;, m.getLCOM()),
+                            new PieChart.Data(&quot;NOC&quot;, m.getNOC()),
+                            new PieChart.Data(&quot;NPM&quot;, m.getNPM()),
+                            new PieChart.Data(&quot;WMC&quot;, m.getWMC()));
+
+         //   c.setData(pieChartData);
+
+
+          PieChart pieChart = new PieChart(pieChartData);
+
+
+
+
+
+          public static void main(String[] args) {
+              launch(args);
+          }
+
+          @Override          
+public void start(Stage primaryStage) {
+
+    primaryStage.setTitle(&quot;java-buddy.blogspot.com&quot;);
+    Group root = new Group();
+
+    TableColumn name = new TableColumn(&quot;name&quot;);
+    name.setCellValueFactory(new PropertyValueFactory&amp;lt;Metrics, String&amp;gt;(
+            &quot;name&quot;));
+
+    TableColumn WMCCol = new TableColumn(&quot;WMC&quot;);
+    WMCCol.setCellValueFactory(new PropertyValueFactory&amp;lt;Metrics, Double&amp;gt;(
+            &quot;WMC&quot;));
+
+    TableColumn DITCol = new TableColumn(&quot;DIT&quot;);
+    DITCol.setCellValueFactory(new PropertyValueFactory&amp;lt;Metrics, Double&amp;gt;(
+            &quot;DIT&quot;));
+
+    TableColumn NOCCol = new TableColumn(&quot;NOC&quot;);
+    NOCCol.setCellValueFactory(new PropertyValueFactory&amp;lt;Metrics, Double&amp;gt;(
+            &quot;NOC&quot;));
+    TableColumn CBOCol = new TableColumn(&quot;CBO&quot;);
+    CBOCol.setCellValueFactory(new PropertyValueFactory&amp;lt;Metrics, Double&amp;gt;(
+            &quot;CBO&quot;));
+    TableColumn RFCCol = new TableColumn(&quot;RFC&quot;);
+    RFCCol.setCellValueFactory(new PropertyValueFactory&amp;lt;Metrics, Double&amp;gt;(
+            &quot;RFC&quot;));
+    TableColumn LCOMCol = new TableColumn(&quot;LCOM&quot;);
+    LCOMCol.setCellValueFactory(new PropertyValueFactory&amp;lt;Metrics, Double&amp;gt;(
+            &quot;LCOM&quot;));
+    TableColumn ceCol = new TableColumn(&quot;Ca&quot;);
+    ceCol.setCellValueFactory(new PropertyValueFactory&amp;lt;Metrics, Double&amp;gt;(
+            &quot;ce&quot;));
+    TableColumn NPMCol = new TableColumn(&quot;NPM&quot;);
+    NPMCol.setCellValueFactory(new PropertyValueFactory&amp;lt;Metrics, Double&amp;gt;(
+            &quot;NPM&quot;));
+
+    primaryStage.setScene(new Scene(root, 200, 200));
+    primaryStage.show();
+
+    List&amp;lt;Metrics&amp;gt; metric = readMetricFromCSV(&quot;C:\\Users\\pavi\\Desktop\\11.txt&quot;);
+    // let&#39;s print all the metric read from CSV file
+    for (Metrics m : metric) {
+        System.out.println(m);
+
+    }
+
+    tableView.setItems(FXCollections.observableArrayList(metric));
+
+    tableView.getColumns().addAll(name, WMCCol, DITCol, NOCCol, CBOCol,
+            RFCCol, LCOMCol, ceCol, NPMCol);
+
+    VBox vBox = new VBox();
+    vBox.setMaxSize(600, 600);
+    vBox.setSpacing(10);
+    PieChart c = new PieChart();
+    tableView.setOnMouseClicked(new EventHandler&amp;lt;Event&amp;gt;() {
+
+        @Override
+        public void handle(Event event) {
+            c.setData(FXCollections.emptyObservableList());
+            TableViewSelectionModel&amp;lt;Metrics&amp;gt; tableViewSelectionModel = tableView
+                    .selectionModelProperty().get();
+            Metrics m = tableViewSelectionModel.getSelectedItem();
+            if(m==null){
+                return;
+            }
+            ObservableList&amp;lt;PieChart.Data&amp;gt; pieChartData = FXCollections
+                    .observableArrayList(
+                            new PieChart.Data(&quot;CBO&quot;, m.getCBO()),
+                            new PieChart.Data(&quot;Ce&quot;, m.getCe()),
+                            new PieChart.Data(&quot;DIT&quot;, m.getDIT()),
+                            new PieChart.Data(&quot;LCOM&quot;, m.getLCOM()),
+                            new PieChart.Data(&quot;NOC&quot;, m.getNOC()),
+                            new PieChart.Data(&quot;NPM&quot;, m.getNPM()),
+                            new PieChart.Data(&quot;WMC&quot;, m.getWMC()));
+            c.setData(pieChartData);
+
+
+
+
+        }
+
+
+
+
+
+    });
+    vBox.getChildren().add(tableView);
+    vBox.getChildren().add(c);
+
+    root.getChildren().add(vBox);
+
+
+
+}
+
+public List&amp;lt;Metrics&amp;gt; readMetricFromCSV(String fileName) {
+
+    List&amp;lt;Metrics&amp;gt; metricsss = new ArrayList&amp;lt;&amp;gt;();
+
+    Path pathToFile = Paths.get(fileName);
+    // create an instance of BufferedReader
+    // using try with resource, Java 7 feature to close resources
+    try (BufferedReader br = Files.newBufferedReader(pathToFile,
+            StandardCharsets.US_ASCII)) {
+        // read the first line from the text file
+        String line = br.readLine();
+        while (line != null &amp;amp;&amp;amp; !line.isEmpty()) { // loop until all lines
+                                                    // are read
+            String[] attributes = line.split(&quot; &quot;); // the file, using a
+                                                    // comma as the
+                                                    // delimiter
+            Metrics valueOfMetric = createMetric(attributes);
+            metricsss.add(valueOfMetric); // adding metric into ArrayList
+            // skip empty line
+            // line.isEmpty() || line.trim().equals(&quot;&quot;) ||
+            // line.trim().equals(&quot;\n&quot;))
+            br.readLine();
+            line = br.readLine();
+        }
+
+    } catch (IOException ioe) {
+        ioe.printStackTrace();
+    }
+
+    return metricsss;
+}
+
+          private   Metrics createMetric(String[] metadata) {
+            String name = metadata[0];
+            int WMC = Integer.parseInt(metadata[1]);
+            int DIT = Integer.parseInt(metadata[2]);
+            int NOC = Integer.parseInt(metadata[3]);
+            int CBO = Integer.parseInt(metadata[4]);
+            int RFC = Integer.parseInt(metadata[5]);
+            int LCOM= Integer.parseInt(metadata[6]);
+            int Ce  = Integer.parseInt(metadata[7]);
+            int NPM = Integer.parseInt(metadata[8]);
+            return new Metrics(name,WMC,DIT,NOC,CBO,RFC,LCOM,Ce,NPM);//,cc
+        }
+
+
+          public class Metrics {
+
+            private String name;
+            private int WMC;
+            private int DIT;
+            private int NOC;
+            private int CBO;
+            private int RFC;
+            private int LCOM;
+            private int Ce;
+            private int NPM;
+
+            public Metrics( String name,int WMC,int DIT,int NOC,int CBO,int RFC,int LCOM, int Ce, int NPM) {
+
+                this.name = name;
+                this.WMC = WMC;
+                this.DIT = DIT;
+                this.NOC = NOC;
+                this.CBO = CBO;
+                this.RFC = RFC;
+                this.LCOM = LCOM;
+                this.Ce = Ce;
+                this.NPM = NPM;
+            }
+
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String name) {
+                this.name = name;
+            }
+
+            public int getWMC() {
+                return WMC;
+            }
+
+            public void setWMC(int WMC) {
+                this.WMC = WMC;
+            }
+
+            public int getDIT() {
+                return DIT;
+            }
+
+            public void setDIT(int DIT) {
+                this.DIT = DIT;
+            }
+
+            public int getNOC() {
+                return NOC;
+            }
+
+            public void setNOC(int NOC) {
+                this.NOC = NOC;
+            }
+
+            public int getCBO() {
+                return CBO;
+            }
+
+            public void setCBO(int CBO) {
+                this.CBO = CBO;
+            }
+
+            public int getRFC() {
+                return RFC;
+            }
+
+            public void setRFC(int RFC) {
+                this.RFC = RFC;
+            }
+
+            public int getLCOM() {
+                return LCOM;
+            }
+
+            public void setLCOM(int LCOM) {
+                this.LCOM = LCOM;
+            }
+
+            public int getCe() {
+                return Ce;
+            }
+
+            public void setCe(int ce) {
+                Ce = ce;
+            }
+
+            public int getNPM() {
+                return NPM;
+            }
+
+            public void setNPM(int NPM) {
+                this.NPM = NPM;
+            }
+
+
+        }
+
+
+
+
+        }
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32840474</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">objectify v5 query filter by a property in an embedded Class</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="google-app-engine" />
+            <category scheme="http://stackoverflow.com/tags" term="gae-datastore" />
+            <category scheme="http://stackoverflow.com/tags" term="backend" />
+            <category scheme="http://stackoverflow.com/tags" term="objectify" />
+        <author>
+            <name>johnny_kb</name>
+            <uri>http://stackoverflow.com/users/2217336</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32840474/objectify-v5-query-filter-by-a-property-in-an-embedded-class" />
+        <published>2015-09-29T09:28:53Z</published>
+        <updated>2015-09-30T02:21:47Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;in my backend application, I have an Entity PositionAugmented&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@Entity 
+public class PositionAugmented {
+
+@Id
+Long id;
+@Index
+Position position;
+@Index
+String username;
+...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;where Position&#39;s member variables are&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Position{
+
+Date time;
+double latitude;
+double longitude;
+@Index
+public Address address;
+...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and Address is composed by&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Address{
+
+@Index public String city;
+...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;using objectify, i need to find all PositionAugmented instances belong to a particular city.
+The actual query i am using is the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public List&amp;lt;PositionAugmented&amp;gt; getPositionAugmentedsByCity(String aCity){
+    Query query = ofy().load().type(PositionAugmented.class).
+                   filter(&quot;position.address.city=&quot;, aCity);
+    return query.list();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;unfortunately this returns me an empty list.
+I tried this query after seeing this:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/objectify/objectify/wiki/Queries#indexing-embedded-classes&quot; rel=&quot;nofollow&quot;&gt;wiki objectify v5 queries on embedded class&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;any help would be greatly appreciated&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/20692838</id>
+        <re:rank scheme="http://stackoverflow.com">3</re:rank>
+        <title type="text">Get key code as well as key modifiers on key press</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="libgdx" />
+        <author>
+            <name>Suseika</name>
+            <uri>http://stackoverflow.com/users/1542343</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/20692838/get-key-code-as-well-as-key-modifiers-on-key-press" />
+        <published>2013-12-19T22:21:04Z</published>
+        <updated>2015-09-30T02:18:57Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;When a user presses a key combination, I need to get key&#39;s code and which modifier keys (&lt;code&gt;Ctrl&lt;/code&gt;, &lt;code&gt;Alt&lt;/code&gt;, &lt;code&gt;Shift&lt;/code&gt; etc) are currently pressed, and choose an appropriate reaction based on that. Is there a cleaner way to do this than the following? (using &lt;a href=&quot;http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/InputProcessor.html#keyDown%28int%29&quot; rel=&quot;nofollow&quot;&gt;InputProcessor#keyDown&lt;/a&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public boolean keyDown(int keycode) {
+      boolean ctrl, alt, shift, ...;
+      if (Gdx.input.isKeyPressed(Input.Keys.LEFT_SHIFT) || Gdx.input.isKeyPressed(Input.Keys.RIGHT_SHIFT)) {
+            shift = true;
+      } else if (/* same for ctrl */) {
+          ctrl = true;
+      } else  /* same for other modifiers */ {
+          //...
+      }
+      // Finally, choose an action based on the key combination pressed
+      if (shift &amp;amp;&amp;amp; keycode == Input.Keys.A) {
+          // What to do if Shift+A is pressed
+      } else if (/* and so on */) {
+          //...     
+      }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I see there are &lt;code&gt;Input.Keys.META_*&lt;/code&gt; bitmasks, which are probably what I need, but I haven&#39;t found any example on how to use those.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32835536</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">IP range with port scanner</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="arrays" />
+            <category scheme="http://stackoverflow.com/tags" term="ip" />
+            <category scheme="http://stackoverflow.com/tags" term="ip-address" />
+            <category scheme="http://stackoverflow.com/tags" term="port-scanning" />
+        <author>
+            <name>Nixoderm</name>
+            <uri>http://stackoverflow.com/users/5383141</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32835536/ip-range-with-port-scanner" />
+        <published>2015-09-29T04:08:13Z</published>
+        <updated>2015-09-30T02:18:14Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;Since in new in java i still have a difficulty to understand the codes. Can someone help me to checking a port scanner with specific range of IP addresses using command line. This is my code, somehow I still having a problem.&lt;/p&gt;
+
+&lt;p&gt;args[0] and args[1] for IP Address range, while args[2] and args[3] for a port scanner.&lt;/p&gt;
+
+&lt;p&gt;Example &gt; java Test 136.186.1.1 5 1 10
+The program will check IP’s 136.186.1.1 to 136.186.1.5 on ports 10-20.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import java.util.concurrent.*;
+import java.util.*;
+import java.net.*;
+
+public class Test 
+{   
+
+public static void usage(String msg) 
+{
+    System.out.println(&quot;*** &quot; + msg);
+    System.out.println(&quot;Enter a valid IP address 0.0.0.0 thru 255.255.255.255&quot;);
+    System.exit(1);
+}
+
+public static void checkIp(int a, int b, int c, int d) 
+{
+    String ipAddr = String.format(&quot;%1$d.%2$d.%3$d.%4$d&quot;, a, b, c, d);
+    System.out.println(&quot;Checking &quot; + ipAddr);
+}
+
+public static void main(String [] args) throws Exception
+{
+
+    final ExecutorService es = Executors.newFixedThreadPool(20);
+    int bRange = 0; //Declare String called bRange with initial value of 0.
+    int eRange = 0; //Declare String called eRange with initial value of 0.
+    final int timeout = 200;
+
+    String ipAddr = args[0];
+
+    int count = 0, a = 0, b = 0, c = 0, d = 0;
+
+    //IP Address range Validation
+    //------------------------------------------------------------------------------------------
+    if (args.length != 2)
+      usage(&quot;Wrong number of arguments&quot;);
+
+    String[] comp = args[0].split(&quot;\\.&quot;);
+    if (comp.length != 4)
+      usage(&quot;&#39;&quot; + args[0] + &quot;&#39; does not have four components&quot;);
+
+    try {
+      a = Integer.parseInt(comp[0]);
+    } catch (NumberFormatException e) {
+      usage(&quot;First component of &#39;&quot; + args[0] + &quot;&#39; is not numeric&quot;);
+    }
+    if (a &amp;lt; 0 || a &amp;gt; 255)
+      usage(&quot;First component of &#39;&quot; + args[0] + &quot;&#39; is out of range&quot;);
+
+    try {
+      b = Integer.parseInt(comp[1]);
+    } catch (NumberFormatException e) {
+      usage(&quot;Second component of &#39;&quot; + args[0] + &quot;&#39; is not numeric&quot;);
+    }
+    if (b &amp;lt; 0 || b &amp;gt; 255)
+      usage(&quot;First component of &#39;&quot; + args[0] + &quot;&#39; is out of range&quot;);
+
+    try {
+      c = Integer.parseInt(comp[2]);
+    } catch (NumberFormatException e) {
+      usage(&quot;Third component of &#39;&quot; + args[0] + &quot;&#39; is not numeric&quot;);
+    }
+    if (c &amp;lt; 0 || c &amp;gt; 255)
+      usage(&quot;First component of &#39;&quot; + args[0] + &quot;&#39; is out of range&quot;);
+
+    try {
+      d = Integer.parseInt(comp[3]);
+    } catch (NumberFormatException e) {
+      usage(&quot;Fourth component of &#39;&quot; + args[0] + &quot;&#39; is not numeric&quot;);
+    }
+    if (d &amp;lt; 0 || b &amp;gt; 255)
+      usage(&quot;First component of &#39;&quot; + args[0] + &quot;&#39; is out of range&quot;);
+
+    try {
+      count = Integer.parseInt(args[1]);
+    } catch (NumberFormatException e) {
+      usage(&quot;Count of &#39;&quot; + args[1] + &quot;&#39; is not numeric&quot;);
+    }
+
+    while (count-- &amp;gt; 0) 
+    {
+      checkIp(a, b, c, d);
+      if (++d == 256) {
+        d = 0;
+        if (++c == 256) {
+          c = 0;
+          if (++b == 256) {
+            b = 0;
+            if (++a == 256) {
+              a = 0;
+            }
+          }
+        }
+      }
+    }
+
+    //-------------------------------------------------------------------------------------------------
+
+    try
+    {       
+        bRange = Integer.parseInt(args[2]); //Assign value of second argument to bRange.
+        eRange = Integer.parseInt(args[3]); //Assign value of third argument to eRange.
+    }
+    catch(NumberFormatException E) //If user enter invalid data.
+    {
+        System.out.println(&quot;You did not enter a valid number for arguments 2 and 3. Please try again with valid Integers.&quot;);
+        System.exit(0);
+    }
+
+    boolean fcheck = true; //DEBUG ONLY CAN DELETE
+    final List&amp;lt;Future&amp;lt;Boolean&amp;gt;&amp;gt; futures = new ArrayList&amp;lt;&amp;gt;(); 
+
+    ArrayList&amp;lt;Integer&amp;gt; portRange = new ArrayList&amp;lt;Integer&amp;gt;((eRange - bRange)); //Declare an ArrayList of Integer values called portRange and set its initial size.
+
+    //For loop to randomize scans.
+    for(int port = bRange; port &amp;lt;= eRange; port++) 
+    {
+
+        portRange.add(port);
+
+        //Use ArrayList of portRange and shuffle to go through each port number once.
+        Collections.shuffle(portRange); //Shuffle portRange.
+
+        int size = portRange.size(); //Declare Integer called size and assign value of portRange ArrayList size value.
+        int randPort = portRange.get(size-1); //Assign the last index of portRange ArrayList to Integer variable randPort.
+
+        System.out.println(randPort); //Show all the ports
+
+        //int randTimeout = randInt(30, 2000); //Assign random value to randTimeout by running method randInt(). PartD
+
+        futures.add(portIsOpen(es, ipAddr, randPort, timeout));
+        //System.out.println(&quot;Timeout: &quot; + randTimeout + &quot;ms&quot;); //DEBUG ONLY. BEST TO KEEP IT TO SHOW TUTOR
+
+        portRange.remove(size - 1); //Remove last element in portRange ArrayList.
+
+
+    }
+
+    es.shutdown(); //Tell the executor service that it can&#39;t accept new tasks, but the already submitted tasks continue to run.
+    int openPorts = 0; //Declare Integer called openPorts and assign value of 0.
+
+
+    for(final Future&amp;lt;Boolean&amp;gt; f : futures)
+    {
+        if(f.get()) 
+        {
+            openPorts++;
+        }
+    }
+    System.out.println(&quot;There are &quot; + openPorts + &quot; open ports on host &quot; + ipAddr + &quot; probed with a timeout of &quot; + timeout + &quot;ms&quot;);
+    //Print statement show how many ports open based on the particular IP Address and the timeout.
+}
+
+
+/**
+* @param es ExecutorService
+* @param ip IP address.
+* @param port Port number.
+* @param timeout Timeout value in ms.
+* @return int Returns the random number chosen.
+*/
+
+public static Future&amp;lt;Boolean&amp;gt; portIsOpen(final ExecutorService es, final String ipAddr, final int port, final int timeout)
+{
+    return es.submit(new Callable&amp;lt;Boolean&amp;gt;() 
+    {
+        @Override public Boolean call()
+        {
+            try //Try block, each time the For loop increments the Try block gets invoked.
+            {
+                Socket socket = new Socket(); //The Try block creates an instance of the Socket Class.
+                socket.connect(new InetSocketAddress(ipAddr, port), timeout); //Create a stream socket and connects it to specified port number at the specified IP Address.
+                socket.close(); //Close the socket connection.
+                System.out.println(&quot;open port found &quot; + port); //Result show how many ports are open.
+                return true;
+            }
+            catch (Exception ex) 
+            {
+                return false;
+            }
+        }
+    });
+}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32751108</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Not able to refresh a layout after adding a view(Only Occurs in CustomAdapter)</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="android" />
+            <category scheme="http://stackoverflow.com/tags" term="flowlayout" />
+        <author>
+            <name>Tintinabulator Zea</name>
+            <uri>http://stackoverflow.com/users/4454657</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32751108/not-able-to-refresh-a-layout-after-adding-a-viewonly-occurs-in-customadapter" />
+        <published>2015-09-23T23:31:53Z</published>
+        <updated>2015-09-30T02:18:05Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;Note: this shouldn&#39;t have anything to do with libraries, I just include them for details&lt;/p&gt;
+
+&lt;p&gt;Problem:  There is a layout called FlingContainer from this library &lt;a href=&quot;https://github.com/Diolor/Swipecards&quot; rel=&quot;nofollow&quot;&gt;https://github.com/Diolor/Swipecards&lt;/a&gt;.  It takes another layout as a parameter(the card to be flinged), Inside the card I have a button to add tags to the card.  In the CustomAdapter used for the Fling Container I have this code in the GetView method.  I know it works because I can see the TVs getting added in debug mode, they just arent showing up.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;addTag.setOnClickListener(new View.OnClickListener() {
+        int i = 0;
+        @Override
+        public void onClick(View v) {
+            TextView tv = new TextView(getContext());
+            tv.setBackgroundColor(getContext().getResources().getColor(R.color.nice_blue));
+            tv.setTextColor(getContext().getResources().getColor(R.color.lightening_yellow));
+            String text = &quot;Goofy&quot;+i++;
+            tv.setText(text);
+            flowLayout.addView(tv);
+
+            //tried combinations of following to get addView to work
+            flowLayout.invalidate();
+            vi.invalidate();
+            parent.invalidate();
+
+        }
+    });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What I&#39;ve tried: I tried doing this in just an activity with no flingContainer and the views are added instantly with no problems.  I tried searching for R.id.addTag from the mainActivity however I get a nullPointer exception, I think this is because addTag is embedded in another layout&lt;/p&gt;
+
+&lt;p&gt;Conclusion: Any idea what is going wrong here? how can I get get addView to work in the card?&lt;/p&gt;
+
+&lt;p&gt;Thanks&lt;/p&gt;
+
+&lt;p&gt;EDIT: here is entire getView&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    public View getView(int position, View convertView, final ViewGroup parent) {
+    final View vi = inflater.inflate(layoutResource, parent, false);
+    TextView tv = (TextView) vi.findViewById(R.id.card_one_line);
+    flowLayout = (FlowLayout) vi.findViewById(R.id.flow_container);
+
+    final TextView typeTag = new TextView(getContext());
+    final TextView typeTag2 = new TextView(getContext());
+    TextView addTag = (TextView) vi.findViewById(R.id.addTag);
+
+
+
+    typeTag2.setText(&quot;Goofy X&quot;);
+    typeTag.setText(lines.get(position).getType());
+
+    typeTag.setBackgroundColor(getContext().getResources().getColor(R.color.nice_blue));
+    typeTag.setTextColor(getContext().getResources().getColor(R.color.lightening_yellow));
+    typeTag.setTextSize(25);
+    typeTag.setPadding(5, 5, 5, 5);
+
+    typeTag2.setBackgroundColor(getContext().getResources().getColor(R.color.nice_blue));
+    typeTag2.setTextColor(getContext().getResources().getColor(R.color.lightening_yellow));
+    typeTag2.setTextSize(25);
+    typeTag2.setPadding(5, 5, 5, 5);
+
+    flowLayout.addView(typeTag);
+    //flowLayout.addView(typeTag2);
+
+    addTag.setOnClickListener(new View.OnClickListener() {
+        int i = 0;
+        @Override
+        public void onClick(View v) {
+            TextView tv = new TextView(getContext());
+            tv.setBackgroundColor(getContext().getResources().getColor(R.color.nice_blue));
+            tv.setTextColor(getContext().getResources().getColor(R.color.lightening_yellow));
+            String text = &quot;Goofy&quot;+i++;
+            tv.setText(text);
+            flowLayout.addView(tv);
+            flowLayout.invalidate();
+            vi.invalidate();
+            parent.invalidate();
+
+        }
+    });
+
+
+    tv.setText((lines.get(position).getLine()));
+    return vi;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856694</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Checking for matching tags</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="html" />
+            <category scheme="http://stackoverflow.com/tags" term="string" />
+            <category scheme="http://stackoverflow.com/tags" term="tags" />
+            <category scheme="http://stackoverflow.com/tags" term="character" />
+        <author>
+            <name>Zancrow</name>
+            <uri>http://stackoverflow.com/users/5391143</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856694/checking-for-matching-tags" />
+        <published>2015-09-30T02:17:37Z</published>
+        <updated>2015-09-30T02:17:37Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;So I have a question that I can&#39;t seem to find the answer to so say I have a line of text that contains not only letters but also angle brackets like &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&quot;&amp;lt;X&amp;gt;Hello, Welcome!&amp;lt;/X&amp;gt;&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now how could I read that line of text and check for any characters like  and then check to see if it can find closing set to match it and if it didn&#39;t display an Error message but if it did it would display Correct message.&lt;/p&gt;
+
+&lt;p&gt;Any help or hints on this would be awesome!&lt;/p&gt;
+
+&lt;p&gt;Thanks!&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856688</id>
+        <re:rank scheme="http://stackoverflow.com">-1</re:rank>
+        <title type="text">How to deploy Java RMI server to Amazon AWS?</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="amazon-web-services" />
+            <category scheme="http://stackoverflow.com/tags" term="rmi" />
+        <author>
+            <name>Imray</name>
+            <uri>http://stackoverflow.com/users/1675976</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856688/how-to-deploy-java-rmi-server-to-amazon-aws" />
+        <published>2015-09-30T02:17:02Z</published>
+        <updated>2015-09-30T02:17:02Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;I am trying to learn about Java RMI and I figure it would be useful to deploy my program to a remote server.&lt;/p&gt;
+
+&lt;p&gt;I&#39;ve signed up for a free Amazon AWS account.&lt;/p&gt;
+
+&lt;p&gt;Can someone point me and future curious ones in the right direction of how to deploy a simple Java RMI program on an Amazon server with the &lt;code&gt;rmiregistry&lt;/code&gt; etc.&lt;/p&gt;
+
+&lt;p&gt;I don&#39;t even know where to begin&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32855984</id>
+        <re:rank scheme="http://stackoverflow.com">2</re:rank>
+        <title type="text">Does java -Xmx 1G mean 1 GB or 2^30 B?</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="units-of-measurement" />
+        <author>
+            <name>nealmcb</name>
+            <uri>http://stackoverflow.com/users/507544</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32855984/does-java-xmx-1g-mean-1-gb-or-230-b" />
+        <published>2015-09-30T00:42:49Z</published>
+        <updated>2015-09-30T02:16:17Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;And in general, are the units used for the &lt;code&gt;-Xmx&lt;/code&gt;, &lt;code&gt;-Xms&lt;/code&gt; and &lt;code&gt;-Xmn&lt;/code&gt; options (&quot;k&quot;, &quot;M&quot; and &quot;G&quot;, or the less standard possibilities &quot;K&quot;, &quot;m&quot; or &quot;g&quot;) &lt;a href=&quot;https://en.wikipedia.org/wiki/Binary_prefix&quot; rel=&quot;nofollow&quot;&gt;Binary prefix&lt;/a&gt; multiples (i.e. powers of 1024), or are they powers of 1000?&lt;/p&gt;
+
+&lt;p&gt;The manuals say they represent kilobytes (kB), megabytes (MB) and gigabytes (GB), using powers of 1000 as defined in the original &lt;a href=&quot;https://en.wikipedia.org/wiki/International_System_of_Units&quot; rel=&quot;nofollow&quot;&gt;SI&lt;/a&gt; system.  My informal tests (that I&#39;m not very confident about) suggest they are really &lt;a href=&quot;https://en.wikipedia.org/wiki/Kibibyte&quot; rel=&quot;nofollow&quot;&gt;kibibytes (kiB)&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Mebibyte&quot; rel=&quot;nofollow&quot;&gt;mebibytes (MiB)&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Gibibyte&quot; rel=&quot;nofollow&quot;&gt;gibibytes (GiB)&lt;/a&gt;, all powers of 1024.&lt;/p&gt;
+
+&lt;p&gt;So which is right?  E.g. what Java code would show the current size?&lt;/p&gt;
+
+&lt;p&gt;Using multiples of 1024 is not surprising for RAM sizes, since RAM is typically physically laid out by doubling up hardware modules.  But using units in a clear and standard way is ever more important as we get to bigger and bigger powers, since the potential for confusion grows.  The unit &quot;t&quot; is also accepted by my JVM, and 1 TiB is 10% bigger than 1 TB.&lt;/p&gt;
+
+&lt;p&gt;Note: if these really are binary multiples, I suggest updating the documentation and user interfaces to be very clear about that, with examples like &quot;&lt;strong&gt;Append the letter k or K to indicate kibibytes (1024 bytes), or m or M to indicate megabytes (1048576 bytes)&lt;/strong&gt;&quot;.  That is the approach taken, e.g., in Ubuntu: &lt;a href=&quot;https://wiki.ubuntu.com/UnitsPolicy&quot; rel=&quot;nofollow&quot;&gt;UnitsPolicy - Ubuntu Wiki&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note: for more on what the options are used for, see e.g. &lt;a href=&quot;http://stackoverflow.com/questions/14763079/what-are-the-xms-and-xmx-parameters-when-starting-jvms&quot;&gt;java - What are the Xms and Xmx parameters when starting JVMs?&lt;/a&gt;.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/594597</id>
+        <re:rank scheme="http://stackoverflow.com">58</re:rank>
+        <title type="text">Hibernate Annotations - Which is better, field or property access?</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="hibernate" />
+            <category scheme="http://stackoverflow.com/tags" term="orm" />
+            <category scheme="http://stackoverflow.com/tags" term="jpa" />
+            <category scheme="http://stackoverflow.com/tags" term="annotations" />
+        <author>
+            <name>Martin OConnor</name>
+            <uri>http://stackoverflow.com/users/18233</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/594597/hibernate-annotations-which-is-better-field-or-property-access" />
+        <published>2009-02-27T12:44:48Z</published>
+        <updated>2015-09-30T02:15:51Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;This question is somewhat related to &lt;a href=&quot;http://stackoverflow.com/questions/305880/hibernate-annotation-placement-question&quot;&gt;http://stackoverflow.com/questions/305880/hibernate-annotation-placement-question&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;But I want to know which is &lt;strong&gt;better&lt;/strong&gt;? Access via properties or access via fields?
+What are the advantages and disadvantages of each?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/29197363</id>
+        <re:rank scheme="http://stackoverflow.com">-1</re:rank>
+        <title type="text">Are there any easy ways to extract data in Balance Sheet/Income Statement?</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="excel" />
+            <category scheme="http://stackoverflow.com/tags" term="machine-learning" />
+            <category scheme="http://stackoverflow.com/tags" term="etl" />
+            <category scheme="http://stackoverflow.com/tags" term="stockquotes" />
+        <author>
+            <name>user1560335</name>
+            <uri>http://stackoverflow.com/users/1560335</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/29197363/are-there-any-easy-ways-to-extract-data-in-balance-sheet-income-statement" />
+        <published>2015-03-22T17:12:01Z</published>
+        <updated>2015-09-30T02:14:27Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;I try to extract qualitative data from companies&#39; balance sheet / income statement. They are excel(.xls) file.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, the content structures vary from one company to another.&lt;/p&gt;
+
+&lt;p&gt;For example, &lt;/p&gt;
+
+&lt;p&gt;To extract revenue value:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;In company A, it locates next to &quot;Revenue&quot; column.&lt;/p&gt;
+    
+    &lt;p&gt;In company B, it locates next to &quot;Income from goods and sales&quot; column and it is listed as thousand dollar per unit.&lt;/p&gt;
+    
+    &lt;p&gt;In company C, it is even worse. You need to look for the row that contains wording &quot;Revenue from sales of goods and&quot; and move down the next row that contains wording &quot;rendering of services&quot;, add value next to that column to the data in a row that contains wording &quot;Scrap sales&quot;, &quot;Gain on exchange rates&quot; and &quot;Gain on equipment disposal&quot;.&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;With more than 500+ available companies, and more than 20 yeas of past data to extract(the content can be varied from year to year, too), this become problematic. I don&#39;t know how to handle each case. The data is so unstructured.&lt;/p&gt;
+
+&lt;p&gt;So, what I wanna ask is that are there any library/API out there(preferably JAVA) that extract this kind of fuzzy information? I don&#39;t want reinvent the wheel if someone already done this. Are there any ready-to-use machine learning API for this kind of thing? Also, theses companies are not listed in US or other well-known stock exchanges so there is no available data provider.&lt;/p&gt;
+
+&lt;p&gt;Thank you for your reply.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32855582</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Java Caching System - finding map size</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="caching" />
+        <author>
+            <name>mycowan</name>
+            <uri>http://stackoverflow.com/users/2556114</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32855582/java-caching-system-finding-map-size" />
+        <published>2015-09-29T23:53:06Z</published>
+        <updated>2015-09-30T02:14:08Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;I&#39;m using Java Caching System (JCS  - &lt;a href=&quot;https://commons.apache.org/proper/commons-jcs/&quot; rel=&quot;nofollow&quot;&gt;https://commons.apache.org/proper/commons-jcs/&lt;/a&gt; ) I need to find the size of a cache (from the class org.apache.commons.jcs.access.CacheAccess)&lt;/p&gt;
+
+&lt;p&gt;With CacheAccess.getStats() I can get a String that gives me the stats of a cache&lt;/p&gt;
+
+&lt;p&gt;e.g.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;String stats = ((ICacheAccess&amp;lt;String, Book&amp;gt;) cache).getStats();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And will give me lots of info&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Region Name = bookCache
+HitCountRam = 0
+HitCountAux = 0
+---------------------------Memory Cache
+List Size = 5015
+Map Size = 5015
+Put Count = 5015
+Hit Count = 0
+Miss Count = 0
+---------------------------Indexed Disk Cache
+Is Alive = true
+Key Map Size = 0
+Data File Length = 0
+Hit Count = 0
+Bytes Free = 0
+Optimize Operation Count = 0
+Times Optimized = 0
+Recycle Count = 0
+Recycle Bin Size = 0
+Startup Size = 0
+Purgatory Hits = 0
+Purgatory Size = 0
+Working = true
+Alive = false
+Empty = true
+Size = 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;but all I need is the Map or List Size.&lt;/p&gt;
+
+&lt;p&gt;Any ideas - other than regex :-)&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32854000</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Refresh Session in spring security SAML</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="spring" />
+            <category scheme="http://stackoverflow.com/tags" term="spring-security" />
+            <category scheme="http://stackoverflow.com/tags" term="spring-saml" />
+        <author>
+            <name>Sahil</name>
+            <uri>http://stackoverflow.com/users/274127</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32854000/refresh-session-in-spring-security-saml" />
+        <published>2015-09-29T21:23:48Z</published>
+        <updated>2015-09-30T02:11:58Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;We are using Spring SAML extension to provide support for SSO to our customers.    Its working fine with our dev environment IDP(okta). However, one of our client is using Tivoli as IDP and we are running into a problem where after certain amount of time, user will start getting unable to authenticate error.  &lt;/p&gt;
+
+&lt;p&gt;Based on the research we found out that, Tivoli is setting &lt;code&gt;SessionNotOnOrAfter&lt;/code&gt; attribute for 
+   &lt;code&gt;&amp;lt;saml:AuthnStatement AuthnInstant=&quot;2015-09-14T20:14:14Z&quot;  SessionIndex=&quot;xxxx&quot; SessionNotOnOrAfter=&quot;2015-09-14T21:14:14Z&quot;&amp;gt;&lt;/code&gt; in our SAML assertion response.&lt;/p&gt;
+
+&lt;p&gt;I would like to know what are the options do we have as SP to handle this scenario. Should we prompting user to re-authenticate themselves whenever they run into an issue or is there are way where we can set up our application in a certain way so that it can refresh session automatically. &lt;/p&gt;
+
+&lt;p&gt;Thanks
+Sahil&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32845275</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Java extending - best refactoring pattern</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="android" />
+            <category scheme="http://stackoverflow.com/tags" term="inheritance" />
+            <category scheme="http://stackoverflow.com/tags" term="design-patterns" />
+            <category scheme="http://stackoverflow.com/tags" term="architecture" />
+        <author>
+            <name>Orest Savchak</name>
+            <uri>http://stackoverflow.com/users/4069913</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32845275/java-extending-best-refactoring-pattern" />
+        <published>2015-09-29T13:28:08Z</published>
+        <updated>2015-09-30T02:08:10Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;I know that I broke open-close principe, but previous architecture does not require such functionality. That&#39;s a story:&lt;/p&gt;
+
+&lt;p&gt;I have one abstract activity that extends CordovaActivity(from XWalk library), and have two concrete activities that extend it - both with its own scope of logic, a lot of that logic has calls to protected methods of activity class. 
+And now we have problems with crosswalk on some custom emulators, I haven&#39;t even access to them. 
+The most problem is CordovaActvities from XWalk and from cordova have almost the same api, but without any general interface, so code for both abstract activities will be almost the same, but parent class should be different. So, is there some elegant way to do this without blind copy-paste, but without core refactoring of my classes?&lt;/p&gt;
+
+&lt;p&gt;I was thinking about some kind of dependency injection for my business logic resolver using empty fragments - they allow me to use most of activity-related methods. Or move most generic UI features also to fragments.&lt;/p&gt;
+
+&lt;p&gt;But I believe that there should be some easier way just to change parent classes and few methods signatures?  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ConcreteLogicActivity1 extends BaseActivity
+ConcreteLogicActivity2 extends BaseActivity
+
+BaseActivity extends XWalkActivity
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now I need to make &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;XWalkBaseActivity extends XWalkActivity
+CordovaBaseActivity extends CordovaActivity
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then I&#39;ll have Logic1 derived from XWalk and Cordova, and Logic2 too. 
+But it will be primitive copy-paste with a lot of the same code.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32833528</id>
+        <re:rank scheme="http://stackoverflow.com">-1</re:rank>
+        <title type="text">Jsvs input file in init.d script</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="ubuntu" />
+            <category scheme="http://stackoverflow.com/tags" term="init.d" />
+            <category scheme="http://stackoverflow.com/tags" term="jsvc" />
+        <author>
+            <name>user3481760</name>
+            <uri>http://stackoverflow.com/users/3481760</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32833528/jsvs-input-file-in-init-d-script" />
+        <published>2015-09-28T23:49:08Z</published>
+        <updated>2015-09-30T02:05:09Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;How to add input file to jsvc in &lt;code&gt;init.d&lt;/code&gt; script?&lt;/p&gt;
+
+&lt;p&gt;I have standard &lt;code&gt;init.d&lt;/code&gt; file for starting my program with &lt;code&gt;JSVC&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;How can I add file path for my properties file and then send it to my Java program?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#! /bin/sh
+#  /etc/init.d/MonitorDaemon
+
+### BEGIN INIT INFO
+# Provides:          mydaemon
+# Default-Start:    $remote_fs $syslog
+# Default-Stop:     $remote_fs $syslog
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Short-Description: Starts the MyDaemon service
+# Description:       This file is used to start the daemon
+#                    and should be placed in /etc/init.d
+### END INIT INFO
+
+# Author:   Sheldon Neilson &amp;lt;sheldon[AT]neilson.co.za&amp;gt;
+# Url:      www.neilson.co.za
+# Date:     25/04/2013
+
+NAME=&quot;Monitor&quot;
+DESC=&quot;Server Monitoring service&quot;
+
+# The path to Jsvc
+EXEC=&quot;/usr/bin/jsvc&quot;
+
+# The path to the folder containing MyDaemon.jar
+FILE_PATH=&quot;/usr/local/$NAME&quot;
+
+# The path to the folder containing the java runtime
+JAVA_HOME=&quot;/usr/lib/jvm/default-java&quot;
+
+# Our classpath including our jar file and the Apache Commons Daemon             library
+CLASS_PATH=&quot;$FILE_PATH/Monitor.jar:$FILE_PATH/lib/commons-daemon-    1.0.15.jar&quot;
+
+# The fully qualified name of the class to execute
+CLASS=&quot;com.theodorchervyakov.Main&quot;
+
+# Any command line arguments to be passed to the our Java Daemon     implementations init() method 
+ARGS=&quot;myArg1 myArg2 myArg3&quot;
+
+#The user to run the daemon as
+USER=&quot;root&quot;
+
+# The file that will contain our process identification number (pid) for other scripts/programs that need to access it.
+PID=&quot;/var/run/$NAME.pid&quot;
+
+# System.out writes to this file...
+LOG_OUT=&quot;$FILE_PATH/log/$NAME.out&quot;
+
+# System.err writes to this file...
+LOG_ERR=&quot;$FILE_PATH/err/$NAME.err&quot;
+
+jsvc_exec()
+{   
+cd $FILE_PATH
+$EXEC -home $JAVA_HOME -cp $CLASS_PATH -user $USER -outfile $LOG_OUT -      errfile $LOG_ERR -pidfile $PID $1 $CLASS $ARGS
+ }
+
+case &quot;$1&quot; in
+    start)  
+    echo &quot;Starting the $DESC...&quot;        
+
+    # Start the service
+    jsvc_exec
+
+    echo &quot;The $DESC has started.&quot;
+;;
+stop)
+    echo &quot;Stopping the $DESC...&quot;
+
+    # Stop the service
+    jsvc_exec &quot;-stop&quot;       
+
+    echo &quot;The $DESC has stopped.&quot;
+;;
+restart)
+    if [ -f &quot;$PID&quot; ]; then
+
+        echo &quot;Restarting the $DESC...&quot;
+
+        # Stop the service
+        jsvc_exec &quot;-stop&quot;
+
+        # Start the service
+        jsvc_exec
+
+        echo &quot;The $DESC has restarted.&quot;
+    else
+        echo &quot;Daemon not running, no action taken&quot;
+        exit 1
+    fi
+        ;;
+*)
+echo &quot;Usage: /etc/init.d/$NAME {start|stop|restart}&quot; &amp;gt;&amp;amp;2
+exit 3
+;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;esac&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856383</id>
+        <re:rank scheme="http://stackoverflow.com">2</re:rank>
+        <title type="text">Java Array index out of bounds exception fix</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="indexoutofboundsexception" />
+        <author>
+            <name>peggy</name>
+            <uri>http://stackoverflow.com/users/3829417</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856383/java-array-index-out-of-bounds-exception-fix" />
+        <published>2015-09-30T01:35:35Z</published>
+        <updated>2015-09-30T02:03:05Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;I am currently getting an array out of bounds exception while executing the line &lt;code&gt;name.firstName = this.firstNames[rand.nextInt(NUM_NAMES)];&lt;/code&gt; Normally I dont have issues finding the source of these exceptions however I have been stuck on this one for some time now. Any help is appreciated, class and stacktrace are pasted below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class NameGenerator {
+    private static final int NUM_NAMES = 200;
+    private static final File NAMES_FILE = new File(&quot;resources/info.dat&quot;);
+
+    /** a random number generator */
+    private Random rand;
+
+    /** the array of first names */
+    private String[] firstNames;
+    /** the array of last names */
+    private String[] lastNames;
+
+    /**
+     * Default Constructor
+     */
+    public NameGen() {
+        super();
+        this.rand = new Random();
+
+        try {
+            readFile();
+        } catch (IOException exp) {
+            this.first = new String[] { &quot;foo&quot; };
+            this.last = new String[] { &quot;bar&quot; };
+        }
+    }
+
+    /**
+     * Read the names from the file
+     */
+    private void readNFiles() throws IOException {
+        List&amp;lt;String&amp;gt; tempFirst = new ArrayList&amp;lt;String&amp;gt;();
+        List&amp;lt;String&amp;gt; tempLast = new ArrayList&amp;lt;String&amp;gt;();
+
+        Scanner scnr = new Scanner(NAMES_FILE);
+
+        while (scnr.hasNext()) {
+            tempFirst.add(scnr.next());
+            tempLast.add(scnr.next());
+        }
+
+        scnr.close();
+
+        int size = tempFirst.size();
+
+        this.first = new String[size];
+        tempFirst.toArray(this.firstNames);
+
+        this.last = new String[size];
+        tempLast.toArray(this.last);
+    }
+
+    /**
+     * @return a generated name
+     */
+    public FullName generateName() {
+        FullName name = new FullName();
+        name.first = this.firstNames[rand.nextInt()];
+
+        name.last = this.lastNames[rand.nextInt()];
+        return name;
+    }
+
+    /**
+     * Class describing a full name
+     */
+    public static final class FullName {
+        /** the first name */
+        public String firstName;
+        /** the last name */
+        public String lastName;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856591</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Programming NOAA Weather Reports Java</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="arrays" />
+        <author>
+            <name>Joseph Malachosky</name>
+            <uri>http://stackoverflow.com/users/5352448</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856591/programming-noaa-weather-reports-java" />
+        <published>2015-09-30T02:02:57Z</published>
+        <updated>2015-09-30T02:02:57Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;I have been assigned with two classes. One called, WeatherData which I am not able to edit, and the other class, Main which I can edit in any way. I must create a third class to calculate the Max, Min, and Average of the data listed in WeatherData. I am having trouble with finding a way to create a for loop that will give me the values I need because I am calling from the get methods in WeatherData which return the opposite data type. Here is my code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class WeatherData
+{
+    private static WeatherData[] dataArray = new WeatherData[775];
+    private static int currentRecord = 0;
+    static
+    {
+        dataArray[0] = new WeatherData(14737,20150801,86,63,75,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[1] = new WeatherData(14737,20150802,86,59,73,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[2] = new WeatherData(14737,20150803,88,62,75,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[3] = new WeatherData(14737,20150804,85,63,74,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[4] = new WeatherData(14737,20150805,84,59,72,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);        dataArray[5] = new WeatherData(14737,20150806,82,57,70,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[6] = new WeatherData(14737,20150807,83,57,70,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[7] = new WeatherData(14737,20150808,84,57,71,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[8] = new WeatherData(14737,20150809,85,63,74,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[9] = new WeatherData(14737,20150810,74,64,69,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[10] = new WeatherData(14737,20150811,84,67,76,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[11] = new WeatherData(14737,20150812,82,61,72,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[12] = new WeatherData(14737,20150813,80,57,69,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[13] = new WeatherData(14737,20150814,86,54,70,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[14] = new WeatherData(14737,20150815,90,62,76,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[15] = new WeatherData(14737,20150816,91,65,78,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[16] = new WeatherData(14737,20150817,93,67,80,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[17] = new WeatherData(14737,20150818,92,68,80,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[18] = new WeatherData(14737,20150819,90,73,82,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[19] = new WeatherData(14737,20150820,88,72,80,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[20] = new WeatherData(14737,20150821,84,63,74,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[21] = new WeatherData(14737,20150822,82,54,68,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[22] = new WeatherData(14737,20150823,82,55,69,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[23] = new WeatherData(14737,20150824,87,57,72,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[24] = new WeatherData(14737,20150825,83,59,71,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[25] = new WeatherData(14737,20150826,78,56,67,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[26] = new WeatherData(14737,20150827,78,56,67,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[27] = new WeatherData(14737,20150828,81,51,66,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[28] = new WeatherData(14737,20150829,85,53,69,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[29] = new WeatherData(14737,20150830,89,60,75,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        dataArray[30] = new WeatherData(14737,20150831,90,68,79,&quot;ALLENTOWN&quot;,&quot;LEHIGH VALLEY INTERNATIONAL AIRPORT&quot;);
+        }
+    // instance variables
+    private int WBAN;
+    private int yearMonthDay;
+    private int tMax;
+    private int tMin;
+    private int tAve;
+    private String stationName;
+    private String location;
+
+
+    /**
+     * Constructor for objects of class WeatherData
+     */
+    public WeatherData(int WBAN, int yearMonthDay, int tMax,
+    int tMin, int tAve, String stationName, String location)
+    {
+        // initialise instance variables
+        this.WBAN = WBAN;
+        this.yearMonthDay = yearMonthDay;
+        this.tMax = tMax;
+        this.tMin = tMin;
+        this.tAve = tAve;
+        this.stationName = stationName;
+        this.location = location;
+    }
+    public int getWBAN()
+    {
+        return this.WBAN;
+    }
+    public int getYearMonthDay()
+    {
+        return this.yearMonthDay;
+    }
+    public int gettMax()
+    {
+        return this.tMax;
+    }
+    public int gettMin()
+    {
+        return this.tMin;
+    }
+    public int gettAve()
+    {
+        return this.tAve;
+    }
+    public String getStationName()
+    {
+        return this.stationName;
+    }
+    public String getLocation()
+    {
+        return this.location;
+    }
+    public static void resetRecord()
+    {
+        currentRecord = 0;
+        return;
+    }
+    public static WeatherData getRecord()
+    {
+        return dataArray[currentRecord];
+    }
+    public static boolean advanceRecord()
+    {
+        if (currentRecord &amp;lt; dataArray.length-1)
+        {
+            currentRecord +=1;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Calculations
+{
+    public void iMax()
+    {
+        WeatherData.getRecord();
+        int max = 100;
+        int largest = WeatherData.getRecord();
+        for(int i = 1; i &amp;lt; WeatherData.getRecord().length; i++)
+        do
+        {
+            WeatherData currRecord = WeatherData.getRecord();
+            System.out.print(currRecord.getWBAN() + &quot; &quot;);
+            System.out.print(currRecord.getYearMonthDay() + &quot; &quot;);
+            System.out.print(currRecord.gettMax() + &quot; &quot;);
+            System.out.print(currRecord.gettMin() + &quot; &quot;);
+            System.out.print(currRecord.gettAve() + &quot; &quot;);
+            System.out.print(currRecord.getStationName() + &quot; [&quot;);
+            System.out.println(currRecord.getLocation() + &quot;]&quot;);
+        }
+        while (WeatherData.advanceRecord());
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856589</id>
+        <re:rank scheme="http://stackoverflow.com">-2</re:rank>
+        <title type="text">Save Items in ListView in to the Database</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="android" />
+            <category scheme="http://stackoverflow.com/tags" term="sqlite" />
+        <author>
+            <name>Miuranga</name>
+            <uri>http://stackoverflow.com/users/3926422</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856589/save-items-in-listview-in-to-the-database" />
+        <published>2015-09-30T02:02:39Z</published>
+        <updated>2015-09-30T02:02:39Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;I&#39;m developing an android application using SQLite Database. I have a itemList which user can enter food items into the List. I want to save the items of each listview seperately (one listview data in a line). And i&#39;m using an Arraylist to store data which user enters into the System. Can someone help me to do this. Below i&#39;ve posted my XML page and Java Class. Thanks in advance!! :)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;manualListScr.xml&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;
+&amp;lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+android:orientation=&quot;vertical&quot; android:layout_width=&quot;match_parent&quot;
+android:layout_height=&quot;match_parent&quot;&amp;gt;
+
+&amp;lt;EditText
+    android:layout_width=&quot;fill_parent&quot;
+    android:layout_height=&quot;wrap_content&quot;
+    android:id=&quot;@+id/itmName&quot;
+    android:hint=&quot;Enter Item&quot;
+    android:textSize=&quot;24dp&quot;
+    android:layout_alignParentTop=&quot;true&quot;
+    android:layout_centerHorizontal=&quot;true&quot;/&amp;gt;
+
+&amp;lt;Button
+    android:layout_width=&quot;fill_parent&quot;
+    android:layout_height=&quot;wrap_content&quot;
+    android:id=&quot;@+id/addItems&quot;
+    android:text=&quot;Add Item&quot;
+    android:layout_below=&quot;@+id/itmName&quot;
+    android:layout_alignParentLeft=&quot;true&quot;/&amp;gt;
+
+&amp;lt;TextView
+    android:layout_width=&quot;fill_parent&quot;
+    android:layout_height=&quot;wrap_content&quot;
+    android:text=&quot;Manual Item List&quot;
+    android:id=&quot;@+id/itmHeader&quot;
+    android:layout_below=&quot;@+id/addItems&quot;
+    android:background=&quot;#5e5e5e&quot;
+    android:textColor=&quot;#FFFFFF&quot;
+    android:textSize=&quot;14dp&quot;/&amp;gt;
+
+&amp;lt;ListView
+    android:layout_width=&quot;wrap_content&quot;
+    android:layout_height=&quot;wrap_content&quot;
+    android:id=&quot;@+id/itmList&quot;
+    android:layout_below=&quot;@+id/itmHeader&quot;
+    android:layout_centerHorizontal=&quot;true&quot;&amp;gt;
+
+&amp;lt;/ListView&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;strong&gt;manualList.java&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class manualInput extends Activity implements View.OnClickListener{
+private Button addButton;
+private EditText editText;
+private ListView listView;
+ArrayList&amp;lt;String&amp;gt; itmList = new ArrayList&amp;lt;String&amp;gt;();
+ArrayAdapter&amp;lt;String&amp;gt; adapter;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.manualinputscr);
+    addButton = (Button) findViewById(R.id.addItems);
+    addButton.setOnClickListener(this);
+    editText = (EditText) findViewById(R.id.itmName);
+    adapter = new ArrayAdapter&amp;lt;String&amp;gt;(this, android.R.layout.simple_expandable_list_item_1,itmList);
+    listView = (ListView) findViewById(R.id.itmList);
+    listView.setAdapter(adapter);
+    registerForContextMenu(listView);
+}
+
+@Override
+public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+    super.onCreateContextMenu(menu, v, menuInfo);
+    MenuInflater inflater = getMenuInflater();
+    inflater.inflate(R.menu.context_menu, menu);
+}
+
+@Override
+public boolean onContextItemSelected(MenuItem item) {
+    //return super.onContextItemSelected(item);
+    AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
+    switch (item.getItemId()){
+        case R.id.editItem:
+            //
+            return true;
+        case R.id.deleteItem:
+            adapter.remove(adapter.getItem(info.position));
+            Toast.makeText(this, &quot;Item Deleted&quot;, Toast.LENGTH_SHORT).show();
+            return true;
+        default:
+            return super.onContextItemSelected(item);
+    }
+}
+
+public void onClick(View view){
+    String input = editText.getText().toString();
+    if(input.length() &amp;gt; 0){
+        adapter.add(input);
+    }
+}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/19572373</id>
+        <re:rank scheme="http://stackoverflow.com">4</re:rank>
+        <title type="text">What&#39;s the right way of uploading to FTP with retries with commons-net?</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="ftp" />
+            <category scheme="http://stackoverflow.com/tags" term="apache-commons" />
+        <author>
+            <name>fd8s0</name>
+            <uri>http://stackoverflow.com/users/853958</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/19572373/whats-the-right-way-of-uploading-to-ftp-with-retries-with-commons-net" />
+        <published>2013-10-24T17:14:53Z</published>
+        <updated>2015-09-30T01:58:42Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;I&#39;m having issues dealing with a server which would close my FTP control connection in spite of me sending keep alive requests with ftpClient.setControlKeepAliveTimeout(CONTROL_CONNECTION_KEEP_ALIVE_INTERVAL_SECONDS);
+Also sometimes it just dies out of SocketException and not the normal FTPConnectionClosedException. All in all, FTP is a very dodgy protocol I&#39;m using a lot and each server I connect requires a bit of tweaking, however this one is giving a very hard time.&lt;/p&gt;
+
+&lt;p&gt;I know there&#39;s a million things I could be doing wrong, my question is, is there some solution with retries already implemented on FTP in case you lose the control connection, since is not something that should be shocking (proxies / firewalls sometimes just randomly lose your connection). Or is there some more elegant way of solving this problem.&lt;/p&gt;
+
+&lt;p&gt;I have something like this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public void store(File fileToUpload) throws IOException, InterruptedException {
+    String filename = fileToUpload.getName();
+    int retries = 0;
+    while (true) {
+        try {
+            ftpClient.storeFile(filename, inputStreamFactory.getInputStream(fileToUpload));
+        } catch (FTPConnectionClosedException | SocketException exception) {
+            LOGGER.debug(&quot;Control connection lost uploading {}, continuing.&quot;, filename);
+        }
+
+        // This sleep is because there&#39;s an anti-malware in the servers which makes the file not to appear
+        // available immediately after an upload
+        LOGGER.debug(&quot;Waiting {} milliseconds for anti-malware protection to process file&quot;, WAIT_AFTER_UPLOAD_MILLISECONDS);
+        threadWrapper.sleep(WAIT_AFTER_UPLOAD_MILLISECONDS);
+        if (!ftpClient.isConnected()) {
+            connect();
+        }
+
+        LOGGER.debug(&quot;Checking if {} is already uploaded&quot;, filename);
+        if (ftpFileChecker.isFileCompleted(listFiles(null), filename, fileToUpload.length())) {
+            // Note this is likely to happen every time since their server will close the control
+            // connection quite fast and FTPClient uses it at the end of storeFile
+            LOGGER.debug(&quot;File {} was uploaded correctly&quot;, filename);
+            break;
+        } else {
+            if (++retries &amp;gt; MAX_RETRIES) {
+                throw new RemoteTimeoutException(&quot;Could not upload file, max retries exceeded&quot;);
+            } else {
+                LOGGER.info(&quot;File {} was not uploaded, retrying&quot;, filename);
+            }
+        }
+    }
+}
+
+public void connect() throws IOException, InterruptedException {
+    int retries = 0;
+    while (true) {
+        try {
+            ftpClient = ftpClientFactory.createFtpClient();
+            ftpClient.connect(server, FTP_PORT);
+            if (!ftpClient.login(username, password)) {
+                LOGGER.error(&quot;Login to FTP failed&quot;);
+                throw new ConfigurationException(&quot;Login to FTP failed&quot;);
+            }
+            ftpClient.enterLocalPassiveMode();
+            ftpClient.setControlKeepAliveTimeout(CONTROL_CONNECTION_KEEP_ALIVE_INTERVAL_SECONDS);
+            ftpClient.setFileType(FTPClient.BINARY_FILE_TYPE);
+            ftpClient.changeWorkingDirectory(uploadDir);
+            break;
+        } catch (FTPConnectionClosedException | SocketException exception) {
+            if (++retries &amp;gt; MAX_RETRIES) {
+                throw new RemoteTimeoutException(&quot;Could not upload file, max retries exceeded&quot;, exception);
+            } else {
+                LOGGER.info(&quot;Could not login, retrying&quot;);
+            }
+        }
+        LOGGER.debug(&quot;Sleeping {} milliseconds before trying to reconnect&quot;, WAIT_BETWEEN_CONNECT_RETRIES_MILLISECONDS);
+        threadWrapper.sleep(WAIT_BETWEEN_CONNECT_RETRIES_MILLISECONDS);
+    }
+}
+
+public FTPFile[] listFiles(String directory) throws IOException, InterruptedException {
+    int retries = 0;
+    while (true) {
+        try {
+            return ftpClient.listFiles(directory);
+        } catch (FTPConnectionClosedException exception) {
+            LOGGER.debug(&quot;Control connection lost when listing files, continuing&quot;);
+        } catch (SocketException exception) {
+            LOGGER.debug(&quot;Socket exception when listing files, continuing&quot;);
+        }
+        if (!ftpClient.isConnected()) {
+            connect();
+        }
+        if (++retries &amp;gt; MAX_RETRIES) {
+            throw new RemoteTimeoutException(&quot;Could not list files, max retries exceeded&quot;);
+        } else {
+            LOGGER.info(&quot;Could not list files, retrying&quot;);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now I&#39;m getting SocketException Broken Pipe on listFiles, and I can&#39;t figure it out anymore since in my local server it works perfect, but in this particular one (hint it runs on Windows NT - :( - it runs some malware protection which prevents the files to appear on the server immediately and is apparently behind some very strange firewalls, and it drops idle connections after about 5 seconds, and they won&#39;t change the configuration cause they are a big company and claim it works for everyone else).&lt;/p&gt;
+
+&lt;p&gt;I tried VFS and investigated over other FTP clients but none I found seem to solve the problem, even more unhelpful, most of them (like ftp4j) are not in maven central which really puts me off trying them unless there&#39;s a guarantee it will solve my problems.&lt;/p&gt;
+
+&lt;p&gt;Any help is welcome.&lt;/p&gt;
+
+&lt;p&gt;Edit: Code given reflects the starting complexity of this, my current solution is more stable with quite a lot more complexity, but it&#39;s not elegant at all, so I leave the question open in case someone cares to contribute a nice solution.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856528</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Using jsch to ssh to linux server from a windows machine</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="linux" />
+            <category scheme="http://stackoverflow.com/tags" term="ssh" />
+            <category scheme="http://stackoverflow.com/tags" term="jsch" />
+        <author>
+            <name>TrevDred</name>
+            <uri>http://stackoverflow.com/users/5348246</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856528/using-jsch-to-ssh-to-linux-server-from-a-windows-machine" />
+        <published>2015-09-30T01:55:47Z</published>
+        <updated>2015-09-30T01:55:47Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;I&#39;m trying to connect to a private machine. I can currently do this using putty now I want to try this using jsch. My machine can connect to the server as my private key is on the linux machine. When I use the code from &lt;a href=&quot;http://www.jcraft.com/jsch/examples/UserAuthPubKey.java.html&quot; rel=&quot;nofollow&quot;&gt;http://www.jcraft.com/jsch/examples/UserAuthPubKey.java.html&lt;/a&gt; I get an &lt;code&gt;Auth fail&lt;/code&gt; error. I think my error has something to do with when I use my private key, I have converted it to SSHOPEN but still get the same error message. My question is in the JCraft example what does this (ex. ~/.ssh/id_dsa)&quot;); mean? Should this be the location where I enter the location of the private key I converted to SSH OPEN? I&#39;ve tried this and it hasn&#39;t worked and now I&#39;m just dumb founded.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856408</id>
+        <re:rank scheme="http://stackoverflow.com">-2</re:rank>
+        <title type="text">Nmap SCAN IPs HELP THANKS</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="database" />
+            <category scheme="http://stackoverflow.com/tags" term="ip" />
+            <category scheme="http://stackoverflow.com/tags" term="comma" />
+            <category scheme="http://stackoverflow.com/tags" term="nmap" />
+        <author>
+            <name>Kosova Albania</name>
+            <uri>http://stackoverflow.com/users/5391086</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856408/nmap-scan-ips-help-thanks" />
+        <published>2015-09-30T01:39:32Z</published>
+        <updated>2015-09-30T01:54:41Z</updated>
+        <summary type="html">
+            
+
+            &lt;pre&gt;&lt;code&gt;@echo off
+for /l %%%x in (1,1,2) do (
+start &quot;rdp&quot; /HIGH nmap -n -Pn -p T:3389 -T5 --script rdp.nse -iR 0
+)
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Inspiration is the following script called rdp.nse:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;description=[[
+Checks if an RDP port is open.
+]]
+license = &quot;Same as Nmap--See http://nmap.org/book/man-legal.html&quot;
+categories = {&quot;default&quot;, &quot;discovery&quot;, &quot;external&quot;, &quot;intrusive&quot;}
+require &quot;shortport&quot;
+portrule = shortport.portnumber(3389, &quot;tcp&quot;, &quot;open&quot;)
+action = function(host, port)
+    file = io.open (&quot;results.txt&quot;,&quot;a+&quot;)
+    file:write (host.ip..&quot;\n&quot;)
+    file:flush()
+    file:close()
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;HOW TO SAVE IP-s &lt;/p&gt;
+
+&lt;p&gt;not like this : &lt;/p&gt;
+
+&lt;p&gt;1.1.1.1
+2.2.2.2&lt;/p&gt;
+
+&lt;p&gt;but with comma&lt;/p&gt;
+
+&lt;p&gt;1.1.1.1,2.2.2.2,3.3.3.3,.....&lt;/p&gt;
+
+&lt;p&gt;thanks sorry for my english&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856470</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Exported Jar (Eclipse) Crashing on Startup</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="eclipse" />
+            <category scheme="http://stackoverflow.com/tags" term="jar" />
+            <category scheme="http://stackoverflow.com/tags" term="export" />
+        <author>
+            <name>user2518712</name>
+            <uri>http://stackoverflow.com/users/2518712</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856470/exported-jar-eclipse-crashing-on-startup" />
+        <published>2015-09-30T01:47:51Z</published>
+        <updated>2015-09-30T01:53:30Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;I&#39;ve made this program with Eclipse. When I launch it &lt;em&gt;from&lt;/em&gt; Eclipse, it works flawlessly, but when I export to a runnable jar and launch that, it whitescreens. I tried running it through command prompt to see if I could get a decent error message. Turns out apparently it had something to do with image loading, specifically the case of the image title (still strange that it worked in Eclipse but not standalone). Anyway, fixed those issues, now I have a similar one - still something to do with image loading if I&#39;m correct. &lt;/p&gt;
+
+&lt;p&gt;Here&#39;s my error output: &lt;a href=&quot;http://pastebin.com/vPP0gWns&quot; rel=&quot;nofollow&quot;&gt;http://pastebin.com/vPP0gWns&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Can anyone offer any insight? Let me know if you need more info, any help is greatly appreciated. Thanks guys.&lt;/p&gt;
+
+&lt;p&gt;Edit: i think it&#39;s worth mentioning that while whitescreened, the application still loops the menu music until you close it.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856409</id>
+        <re:rank scheme="http://stackoverflow.com">-1</re:rank>
+        <title type="text">Not printing occurrences of each keys correctly with the HashMap</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="hashmap" />
+        <author>
+            <name>John</name>
+            <uri>http://stackoverflow.com/users/3562273</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856409/not-printing-occurrences-of-each-keys-correctly-with-the-hashmap" />
+        <published>2015-09-30T01:39:40Z</published>
+        <updated>2015-09-30T01:53:01Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;I am trying to print how many times a particular Key has occurred in an array and it seems like it&#39;s printing one for all of the values. Could anyone please tell me what logical error I am having in the code below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import java.util.HashMap;
+import java.util.Map;
+
+public class MostOccuranceOfNumber {
+
+    public static void main(String[] args) {
+
+
+        int[] n = {1,2,3,4,5,6,7,7,7,7};
+
+        Map&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;Integer,Integer&amp;gt;();
+
+        // Create Hash Map
+
+        for(int i = 0 ; i &amp;lt; n.length ; i++){
+
+
+            if(map.containsKey(n)){
+
+                map.put(n[i], map.get(n[i]) +1);
+
+            }
+            else{
+
+                map.put(n[i], 1);
+            }
+
+            for(Map.Entry&amp;lt;Integer, Integer&amp;gt; m : map.entrySet()){
+
+                System.out.println(&quot;Key &quot;+m.getKey()+&quot;Occured&quot;+m.getValue()+&quot;times&quot;);
+
+            }
+
+
+        }
+
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856500</id>
+        <re:rank scheme="http://stackoverflow.com">-3</re:rank>
+        <title type="text">How to add numbers in an array of strings and put those numbers into another array?</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+        <author>
+            <name>Max Lee</name>
+            <uri>http://stackoverflow.com/users/5386657</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856500/how-to-add-numbers-in-an-array-of-strings-and-put-those-numbers-into-another-arr" />
+        <published>2015-09-30T01:51:29Z</published>
+        <updated>2015-09-30T01:51:29Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;If I had the sentence &quot;There are 20 pizzas and 10 cokes&quot;, it should be equal to 30 and if I had the sentence &quot;There are 2 snakes and 1 mouse in my room&quot; it should be equal to 3. I need to put those sum values into an array.&lt;/p&gt;
+
+&lt;p&gt;Here is what I have, but doesn&#39;t work.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;String nums[] = {&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;};
+int numcounter = new int[parts.length];
+       // parts is an array of sentences already declared
+        for (int x = 0; x &amp;lt; parts.length; x++)
+        {
+            String sum =&quot;&quot;;
+
+            for (int i = 0; i &amp;lt; parts[x].length(); i++)
+            {
+
+                   for(int c = 0; c &amp;lt; nums.length; c++)
+                   {
+
+                    if( nums[c].equals(parts[x].charAt(i)))
+                    {
+                        for(int p = 0; p &amp;lt; nums.length; p++)
+                            {
+                                if(nums[p].equals(parts[x].charAt(i+1)))
+                                    {
+                                         sum = sum + nums[c] + nums[p];
+                                     }
+                            }
+
+                     sum = sum + nums[c];
+                   }
+
+
+                   }
+
+
+
+
+
+            }
+            try
+            {
+                numcounter[x] = Integer.parseInt(numbersum);
+            }
+            catch (NumberFormatException e) {}
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856446</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Cannot find string</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="string" />
+        <author>
+            <name>Trevn Jones</name>
+            <uri>http://stackoverflow.com/users/5374289</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856446/cannot-find-string" />
+        <published>2015-09-30T01:45:11Z</published>
+        <updated>2015-09-30T01:51:06Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;I&#39;m just messing around with code to see what I can do and what I can&#39;t do and so I&#39;m creating a VERY simple log in program and for some reason it can&#39;t seem to find one of the strings. Here&#39;s the code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import java.util.Scanner;
+
+public class Login {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print(&quot;Username: &quot;);
+        String user = input.next();
+        System.out.print(&#39;\f&#39;);
+
+        while (true) {
+            System.out.print(&quot;Pass: &quot;);
+            String pass = input.next();
+            System.out.print(&#39;\f&#39;);
+
+            System.out.print(&quot;Password Again: &quot;);
+            String pass2 = input.next();
+            System.out.print(&#39;\f&#39;);
+
+            if (pass.equals(pass2)) {
+                System.out.println(&quot;*Passwords Match*&quot;);
+                System.out.println(&quot;&quot;);
+                break;
+            } else if (!pass.equals(pass2)) {
+                 System.out.println(&quot;*Passwords don&#39;t match, please try again*&quot;);
+                 System.out.println(&quot;&quot;);
+            }
+
+        }
+        System.out.println(&quot;User: &quot; + user);
+        System.out.println(&quot;Pass: &quot; + pass);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It can&#39;t find the string pass. I don&#39;t know if it&#39;s a reserved word or not but when I tried changing the string to password instead of pass it still couldn&#39;t find it. Any help would be nice&lt;/p&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856289</id>
+        <re:rank scheme="http://stackoverflow.com">-1</re:rank>
+        <title type="text">my program doesn&#39;t run completely</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="if-statement" />
+        <author>
+            <name>ray389807</name>
+            <uri>http://stackoverflow.com/users/5391054</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856289/my-program-doesnt-run-completely" />
+        <published>2015-09-30T01:24:01Z</published>
+        <updated>2015-09-30T01:48:31Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;For some reason, my program stops when it reaches the part that asks the user if it know it&#39;s exam 1 score. I need the user to be able to enter yes or no. Why does the program stop? I need it to work properly. I have all the if-else statements. I am able to enter the percentage weights, but that is all that the program will do. More must be done. My code extends far beyond entering the percentage weights. Please help me.  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import java.util.Scanner;
+public class GradeCalculation {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        Scanner grade = new Scanner (System.in);
+
+        // A new scanner must be created. The scanner is essential to this program performing properly. 
+
+        double A = 90-100; 
+        double B = 80-89; 
+        double C = 70-79; 
+        double D = 60-69; 
+        double F = 0-59;
+        String LetterGrade; 
+        String yes; 
+        String no;
+        double Exam1, Exam2, finalExam, Labs, Projects, Attendance, Quizzes;
+        double Exam1Grade, Exam2Grade, finalExamGrade, LabAverage, ProjectsAverage, AttendanceAverage, QuizzesAverage;
+        double knownWeight;
+        double PercentageWeights;
+
+        // As always, the variables must be declared at the beginning of the program. 
+
+
+        System.out.print(
+                &quot;Grading Scale:\n&quot;+
+                &quot;A = 90-100 \n&quot;+
+                &quot;B = 80-89 \n&quot;+ 
+                &quot;C = 70-79 \n&quot;+ 
+                &quot;D = 60-69 \n&quot;+
+                &quot;F = 00-59 \n&quot;);
+
+        System.out.println(&quot;What letter grade do you want to achieve in this course?&quot;);
+        LetterGrade = grade.next();
+
+        // The user will type the letter grade that it wants in this part. 
+
+        System.out.println(&quot;\nEnter Percentage Weights: \t&quot;);
+
+        String input = grade.nextLine();
+
+        // The string above is needed when the user enters the exam grades and averages. 
+
+        System.out.print(&quot;\n\nExam 1: \t&quot;); 
+        Exam1 = grade.nextShort();
+        System.out.print(&quot;\nExam 2: \t&quot;); 
+        Exam2 = grade.nextShort();
+        System.out.print(&quot;\nFinal Exam: \t&quot;);
+        finalExam = grade.nextShort();
+        System.out.print(&quot;\nLabs: \t&quot;);
+        Labs = grade.nextShort();
+        System.out.print(&quot;\nProjects: \t&quot;);
+        Projects = grade.nextShort();
+        System.out.print(&quot;\nAttendance: \t&quot;);
+        Attendance = grade.nextShort();
+        System.out.print(&quot;\nQuizzes: \t&quot;);
+        Quizzes = grade.nextShort();
+
+        PercentageWeights = (int)(Exam1 + Exam2 + finalExam + Labs + Projects + Attendance + Quizzes);
+
+        // The equation above will provide the sum of the percentage weights. Since the variables in the equation were 
+        // originally declared as doubles, I had to put &quot;int&quot; before the actual equation. 
+
+
+        if (PercentageWeights &amp;gt; 100 || PercentageWeights &amp;lt; 100) { 
+            System.out.println(&quot;\nWeights do not add up to 100. Program exiting. Have a nice day!&quot;);
+            System.exit(0);
+        }
+        else { 
+            System.out.println(&quot;\nEnter your scores out of a 100: \t&quot;);
+        }
+
+        // The part above is very important to continue the rest of the program. If the sum of the percentage weights equals 100, 
+        // the program will continue to run. If the sum is greater than or less than 100, the program will terminate. 
+
+        System.out.print(&quot;\nDo you know your Exam 1 score?&quot;);
+        if (input.equalsIgnoreCase(&quot;yes&quot;)) {
+            System.out.print(&quot;\nScore received on Exam 1: &quot;); 
+            Exam1Grade = grade.nextDouble();
+        }
+        else{ 
+            Exam1Grade = 0;
+        }
+
+        System.out.print(&quot;\nDo you know your Exam 2 score?&quot;);
+        if (input.equalsIgnoreCase(&quot;yes&quot;)) { 
+            System.out.print(&quot;\nScore received on Exam 2: &quot;);
+            Exam2Grade = grade.nextDouble();
+        }
+        else{ 
+            Exam2Grade = 0;
+        }
+        System.out.print(&quot;\nDo you know your final exam score?&quot;);
+        if (input.equalsIgnoreCase(&quot;yes&quot;)){ 
+            System.out.print(&quot;\nScore received on final exam: &quot;);
+            finalExamGrade = grade.nextDouble();
+        }
+        else{
+            finalExamGrade = 0;
+        }
+        System.out.print(&quot;\nDo you know your lab average?&quot;);
+        if (input.equalsIgnoreCase(&quot;yes&quot;)){ 
+            System.out.print(&quot;\nAverage lab grade: &quot;); 
+            LabAverage = grade.nextDouble();
+        }
+        else{
+            LabAverage = 0;
+        }
+        System.out.print(&quot;\nDo you know your project average?&quot;);
+        if (input.equalsIgnoreCase(&quot;yes&quot;)){
+            System.out.print(&quot;\nAverage project grade: &quot;); 
+            ProjectsAverage = grade.nextDouble();
+        }
+        else{
+            ProjectsAverage = 0;
+        }
+        System.out.print(&quot;\nDo you know your quiz average?&quot;);
+        if (input.equalsIgnoreCase(&quot;yes&quot;)) {
+        System.out.print(&quot;\nAverage quiz grade: &quot;);
+            QuizzesAverage = grade.nextDouble();
+        }
+        else{ 
+            QuizzesAverage = 0;  
+        } 
+        System.out.print(&quot;\nDo you know your attendance average?&quot;);
+        if (input.equalsIgnoreCase(&quot;yes&quot;)){ 
+        System.out.print(&quot;\nAverage Attendance Grade: &quot;);
+            AttendanceAverage = grade.nextDouble();
+        }
+        else{
+            AttendanceAverage = 0;      
+        }
+
+        // The user has finished answering the questions. Now the program will automatically calculate the data based on 
+        // what the user typed into the program. 
+
+        double CurrentGrade, avgToFinalLetterGrade, WeightandGrade, finalOverallGrade; 
+
+        // The doubles above need to be declared in order for the equations below to work properly. 
+
+        WeightandGrade = (int)((Exam1 * Exam1Grade) + (Exam2 * Exam2Grade) + (finalExam * finalExamGrade) + (Labs * LabAverage) + (Projects * ProjectsAverage) + (Quizzes * QuizzesAverage) + (Attendance * AttendanceAverage));
+
+        CurrentGrade = (int)((WeightandGrade) / (Exam1 + Exam2 + finalExam + Labs + Projects + Quizzes + Attendance ));
+
+        knownWeight = (Exam1 + Exam2 + finalExam + Labs + Projects + Quizzes + Attendance);
+
+        if (grade.equals(A)){ 
+            finalOverallGrade = 90;
+        }
+        else if (grade.equals(B)){ 
+            finalOverallGrade = 80;
+        }
+        else if (grade.equals(C)){ 
+            finalOverallGrade = 70;
+        }
+        else if (grade.equals(D)){ 
+            finalOverallGrade = 60;
+        }
+        else 
+            finalOverallGrade = F; 
+
+        avgToFinalLetterGrade = (((100-finalOverallGrade) * (WeightandGrade)) / (100 - knownWeight));
+
+        // The equations above are one of the last parts of the program. These equations are critical to determine whether or not the user received its desired letter grade. 
+        // If the desired grade was not reached, the program will give a score that the user must consistently receive in order to possibly reach the desired letter grade.
+
+        if (finalOverallGrade &amp;gt;= 90){ 
+            System.out.print(&quot;Congratulations! You got an A in the class! Hooray!&quot;);
+        }
+        else if (finalOverallGrade &amp;gt;=80 &amp;amp;&amp;amp; finalOverallGrade &amp;lt; 90){ 
+            System.out.print(&quot;Good job. You got a B in the class!&quot;);
+        }
+        else if (finalOverallGrade &amp;gt;=70 &amp;amp;&amp;amp; finalOverallGrade &amp;lt; 80){ 
+            System.out.print(&quot;You got a C in the class.&quot;);
+        }
+        else if (finalOverallGrade &amp;gt;=60 &amp;amp;&amp;amp; finalOverallGrade &amp;lt; 70){
+            System.out.print(&quot;You got a D in the class.&quot;);
+        }
+        else 
+            System.out.print(&quot;I&#39;m sorry, but you have a failing grade in the class. May your GPA have mercy on your soul.&quot;);
+        }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    <entry>
+        <id>http://stackoverflow.com/q/32856410</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Eclipse throw NullPointerException when running JUnit test</title>
+            <category scheme="http://stackoverflow.com/tags" term="java" />
+            <category scheme="http://stackoverflow.com/tags" term="eclipse" />
+            <category scheme="http://stackoverflow.com/tags" term="junit" />
+        <author>
+            <name>yanyu5</name>
+            <uri>http://stackoverflow.com/users/5124071</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/32856410/eclipse-throw-nullpointerexception-when-running-junit-test" />
+        <published>2015-09-30T01:39:45Z</published>
+        <updated>2015-09-30T01:46:44Z</updated>
+        <summary type="html">
+            
+
+            &lt;p&gt;The version of my JDK is &lt;strong&gt;7.0&lt;/strong&gt;.&lt;br&gt;
+The version of my Eclipse is &lt;strong&gt;eclipse-jee-mars-R-win32-x86_64&lt;/strong&gt;.&lt;br&gt;
+The version of JUnit is 4.4.&lt;/p&gt;
+
+&lt;p&gt;My code is as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package nn;
+
+import org.junit.Test;
+
+public class Ofin {
+
+       @Test
+       public  void  show(){
+           System.out.println(&quot;cx&quot;);
+       } 
+
+       @Test
+       public  void  show2(){
+           System.out.println(&quot;cx2&quot;);
+       }       
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;My question is that when I select the name of a method (for example select &lt;code&gt;show&lt;/code&gt;) and run JUnit test, Eclipse throws &lt;code&gt;NullPointerException&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, when I select the name of method &lt;strong&gt;and its brackets&lt;/strong&gt; (for example selecting &lt;code&gt;show()&lt;/code&gt;) it is ok, I can see the result on console. But why?&lt;/p&gt;
+
+&lt;p&gt;My code is so simple that it can&#39;t have a syntactic error.
+I use older version of Eclipse, but versions in years after 2014 all have this problem.&lt;/p&gt;
+
+&lt;p&gt;PS: I am from China, my English is poor, and a Java beginner. If I don&#39;t express my question clearly, please forgive me.&lt;/p&gt;
+
+        </summary>
+    </entry>
+</feed>
