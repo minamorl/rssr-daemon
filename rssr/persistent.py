@@ -13,7 +13,7 @@ logger = _logger(__name__)
 def get_redis():
     r = redis.StrictRedis(decode_responses=True)
     try:
-        check_radis_health(r)
+        r.ping()
         return r
     except redis.exceptions.ConnectionError:
         print("Redis server is not available. Please confirm that redis-server are running.")
@@ -34,9 +34,7 @@ def format(item):
     return formatted
 
 
-def save_parsed_value(url, data, redis_key=None):
-    r = get_redis()
-
+def save_parsed_value(url, data, r=get_redis()):
     d = feedparser.parse(data).entries
     for item in d:
         redis_key = "rssr:feed:{feed_url}:{item}".format(feed_url=url, item=item.link)
@@ -50,11 +48,6 @@ def save_raw_feed(data, fp):
     logger.info("file {} was generated.".format(fp.name))
 
 
-def get_url_lists():
-    r = get_redis()
+def get_url_lists(r=get_redis()):
     redis_key = "rssr:urls"
     return r.lrange(redis_key, 0, -1)
-
-
-def check_radis_health(r):
-    return r.ping()
