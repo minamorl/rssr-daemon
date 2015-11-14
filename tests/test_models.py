@@ -1,4 +1,4 @@
-from rssr.persistent import FeedItem, Feed
+from rssr.models import FeedItem, Feed
 import feedparser
 import os
 import glob
