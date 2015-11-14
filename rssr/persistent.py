@@ -42,11 +42,12 @@ class FeedItem(redisorm.core.PersistentData):
     @classmethod
     def create_from(cls, feed, item):
         obj = cls(feed=feed)
-        obj.link = item.link
-        obj.published = datetime.datetime.fromtimestamp(mktime(item.published_parsed)).strftime('%Y-%m-%d %H=%M=%S')
-        obj.title = item.title
-        obj.author = item.author
-        obj.summary = item.summary
+        obj.link = item.get("link")
+        if item.published_parsed is not None:
+            obj.published = datetime.datetime.fromtimestamp(mktime(item.published_parsed)).strftime('%Y-%m-%d %H=%M=%S')
+        obj.title = item.get("title")
+        obj.author = item.get("author")
+        obj.summary = item.get("summary")
         if "content" in item:
             obj.content= item.content[0].value
         return obj
@@ -55,7 +56,7 @@ def save_parsed_value(url, data, r=get_redis()):
     p = redisorm.core.Persistent("rssr", r=r)
     d = feedparser.parse(data).entries
 
-    feed = Feed(url)
+    feed = Feed(url=url)
     p.save(feed)
     for _item in d:
         item = FeedItem.create_from(feed, _item)
