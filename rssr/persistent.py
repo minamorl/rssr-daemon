@@ -22,13 +22,15 @@ def get_redis():
         sys.exit(1)
 
 
-
 class Feed(redisorm.core.PersistentData):
+
     def __init__(self, id=None, url=None):
         self.id = id
         self.url = url
 
+
 class FeedItem(redisorm.core.PersistentData):
+
     def __init__(self, id=None, feed=None, link=None, published=None, title=None, author=None, summary=None, content=None):
         self.id = id
         self.feed = redisorm.proxy.PersistentProxy(feed)
@@ -49,18 +51,23 @@ class FeedItem(redisorm.core.PersistentData):
         obj.author = item.get("author")
         obj.summary = item.get("summary")
         if "content" in item:
-            obj.content= item.content[0].value
+            obj.content = item.content[0].value
         return obj
+
 
 def save_parsed_value(url, data, r=get_redis()):
     p = redisorm.core.Persistent("rssr", r=r)
     d = feedparser.parse(data).entries
 
-    feed = Feed(url=url)
-    p.save(feed)
+    feed = p.find(Feed, lambda feed: feed.url == url)
+    if feed is None:
+        Feed(url=url)
+        p.save(feed)
     for _item in d:
-        item = FeedItem.create_from(feed, _item)
-        p.save(item)
+        item = p.find(FeedItem, lambda feed: feed.link == _item.get("link"))
+        if item is None:
+            FeedItem.create_from(feed, _item)
+            p.save(item)
 
 
 def save_raw_feed(data, fp):
