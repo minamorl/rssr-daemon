@@ -5,7 +5,7 @@ import feedparser
 import datetime
 from time import mktime
 from rssr.utils import _logger
-import redisorm.core
+from redisorm.core import Column, PersistentData
 import redisorm.proxy
 import sys
 
@@ -22,30 +22,29 @@ def get_redis():
         sys.exit(1)
 
 
-class Feed(redisorm.core.PersistentData):
+class Feed(PersistentData):
 
-    def __init__(self, id=None, url=None):
-        self.id = id
-        self.url = url
+    id = Column()
+    url = Column()
+    fulltext = Column()
 
 
-class FeedItem(redisorm.core.PersistentData):
+class FeedItem(PersistentData):
 
-    def __init__(self, id=None, feed=None, link=None, published=None, title=None, author=None, summary=None, content=None):
-        self.id = id
-        self.feed = redisorm.proxy.PersistentProxy(feed)
-        self.link = link
-        self.published = published
-        self.title = title
-        self.author = author
-        self.summary = summary
-        self.content = content
+    id = Column()
+    feed = Column(redisorm.proxy.PersistentProxy)
+    link = Column()
+    published = Column()
+    title = Column()
+    author = Column()
+    summary = Column()
+    content = Column()
 
     @classmethod
     def create_from(cls, feed, item):
         obj = cls(feed=feed)
         obj.link = item.get("link")
-        if item.published_parsed is not None:
+        if item.get("published_parsed", None) is not None:
             obj.published = datetime.datetime.fromtimestamp(mktime(item.published_parsed)).strftime('%Y-%m-%d %H=%M=%S')
         obj.title = item.get("title")
         obj.author = item.get("author")
@@ -55,25 +54,19 @@ class FeedItem(redisorm.core.PersistentData):
         return obj
 
 
-def save_parsed_value(url, data, r=get_redis()):
+def save(url, data, r=get_redis()):
     p = redisorm.core.Persistent("rssr", r=r)
-    d = feedparser.parse(data).entries
+    entries = feedparser.parse(data).entries
 
     feed = p.find(Feed, lambda feed: feed.url == url)
     if feed is None:
-        Feed(url=url)
+        feed = Feed(url=url ,fulltext=data)
         p.save(feed)
-    for _item in d:
+    for _item in entries:
         item = p.find(FeedItem, lambda feed: feed.link == _item.get("link"))
         if item is None:
-            FeedItem.create_from(feed, _item)
+            item = FeedItem.create_from(feed, _item)
             p.save(item)
-
-
-def save_raw_feed(data, fp):
-    with fp:
-        fp.write(data)
-    logger.info("file {} was generated.".format(fp.name))
 
 
 def get_url_lists(r=get_redis()):

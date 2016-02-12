@@ -5,8 +5,8 @@ import datetime
 import os
 import rssr.crawler
 import sys
-from rssr.utils import _argparse, exec_time, _logger, validate_filename
-from rssr.models import save_parsed_value, save_raw_feed, get_url_lists
+from rssr.utils import _argparse, exec_time, _logger
+from rssr.models import save, get_url_lists
 
 
 logger = _logger(__name__)
@@ -16,13 +16,7 @@ def task(args):
     for url in get_url_lists():
         logger.info("Start parsing {}".format(url))
         fetched = rssr.crawler.fetch(url)
-
-        filename = validate_filename(url)
-        filepath = os.path.join(args.dest, filename)
-        save_raw_feed(fetched.text, open(filepath, 'w'))
-
-        save_parsed_value(url, fetched.text) 
-
+        save(url, fetched.text) 
         logger.info("task end.")
 
 

@@ -12,10 +12,6 @@ def _logger(name):
 logger = _logger(__name__)
 
 
-def validate_filename(filename):
-    return base64.b64encode(filename.encode('utf-8')).decode('utf-8')
-
-
 def _argparse():
     parser = argparse.ArgumentParser()
     parser.add_argument('--daemonize', action='store_true')

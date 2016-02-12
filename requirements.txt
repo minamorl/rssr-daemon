@@ -4,4 +4,4 @@ python-daemon
 redis
 requests
 virtualenv
-redis-orm
+redis-orm>=0.2.2
